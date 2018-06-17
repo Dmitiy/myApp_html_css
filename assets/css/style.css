@@ -16,8 +16,6 @@ input:focus {
 }
 header {
     height: 88px;
-    /* padding-left: 25px;
-    padding-right: 30px; */
 }
 .Search-input input[name='search-goods'] {
     font-size: 12px;

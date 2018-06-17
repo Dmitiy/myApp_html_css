@@ -52,7 +52,7 @@ Thumbs.db
 .svn
 .svn/
 CVS
-.vscode
+
 
 # XCode 4 #
 ###########
@@ -62,3 +62,7 @@ CVS
 *.mode2v3
 *.perspectivev3
 xcuserdata/
+
+###########
+node_modules/
+.vscode

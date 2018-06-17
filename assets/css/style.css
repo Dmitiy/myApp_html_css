@@ -6,12 +6,14 @@ body {
 a:hover {
     text-decoration: none;
 }
-input:focus {
+input:focus,
+.btn.focus,
+.btn:focus {
     outline: none;
+    box-shadow: none;
 }
-.page {
+.page, .wrapper {
     width: 1440px;
-    height: 100vh;
 }
 header {
     height: 88px;
@@ -25,6 +27,11 @@ header {
     width: 270px;
     border-style: solid;
     border-color: #f5f5f5;
+}
+.User-profile a {
+    font-size: 13px;
+    color: #999;
+    line-height: 20px;
 }
 .Menu {
     height: 60px;
@@ -56,7 +63,6 @@ header {
 #myCarousel {
     margin-top: 30px;
     margin-bottom: 40px;
-    width: 1110px;
     height: 330px;
 }
 
@@ -96,10 +102,105 @@ header {
 }
 
 .carousel-control-prev {
-    left: 5%;
+    left: 8%;
 }
 
-
+.btn-filter-3 {
+    width: 240px;
+    display: flex;
+    align-items: center;
+}
+.btn-filter-3 label {
+    font-size: 12px;
+    background-color: transparent;
+    color: #b2b2b2;
+    border-color: #b3b3b3;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-filter-3 label:first-of-type {
+    width: 84px;
+}
+.btn-filter-3 label:nth-of-type(2) {
+    width: 88px;
+}
+.btn-filter-3 label:nth-of-type(3) {
+    width: 68px;
+}
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+    background-color: #ebebeb;
+    color: #b3b3b3;
+    border-color: #b3b3b3;
+}
+#dropdownMenu1,
+#dropdownMenu2 {
+    color: #b2b2b2;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    border: 1px solid #b3b3b3;
+}
+#dropdownMenu1{
+    width: 120px;
+}
+#dropdownMenu2{
+    width: 85px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #808080;
+}
+.Products .card {
+    border-radius: 0 0 .25em .25em;
+    border-color: rgba(195, 177, 177, 0.125);
+    box-shadow: 0 2px 4px rgba(195, 177, 177, 0.125);
+}
+.Products .card-header,
+.Products .card-body,
+.Products .card-footer {
+    color: #808080;
+    font-size: 13px;
+    line-height: 20px;
+}
+.Products .card-header,
+.Products .card-footer {
+    background: none;
+}
+.Products .card-header {
+    height: 59px;
+    border-bottom: 1px solid rgba(195, 177, 177, 0.125);
+}
+.Products .card-body {
+    height: 210px;
+}
+.Products .card-footer {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border-top: 1px solid rgba(195, 177, 177, 0.125);
+    height: 60px;
+}
+.btn-show-more {
+    width: 150px;
+    height: 50px;
+    color: #b2b2b2;
+    font-size: 14px;
+    font-weight: bold;
+    border-color: #ebebeb;
+}
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-secondary.dropdown-toggle:focus,
+.btn-secondary:focus,
+.btn-secondary.focus,
+.btn.focus {
+    box-shadow: none;
+}
 /* helper classes */
 
 .border-left-radius {

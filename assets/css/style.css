@@ -291,9 +291,6 @@ footer .sub-footer.border-top {
 .sub-footer {
     height: 90px;
 }
-footer a {
-    padding: .5em 0;
-}
 footer a,
 .sub-footer p > a {
     color: #b2b2b2;

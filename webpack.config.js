@@ -1,121 +1,142 @@
-'use strict';
-let path = require('path');
-let webpack = require('webpack');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = {
-    // context: path.resolve(__dirname, 'src'),
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const fs = require('fs');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin  = require('clean-webpack-plugin');
+const cleanPlugin = new CleanWebpackPlugin(['public']);
 
-    entry: './src/index.js',
+const extractPlugin = new ExtractTextPlugin({
+    filename: 'assets/css/[name].css'
+});
+
+const config = {
+
+    entry: {
+        app: [
+            './src/index.js',
+            './src/assets/scss/style.scss'
+        ]
+    },
 
     output: {
-        path: path.resolve(__dirname, 'public/'),
-        filename: 'assets/js/index.js',
-        // publicPath: 'assets/'
+        path: path.resolve(__dirname, 'public'),
+        filename: 'assets/js/[name].js',
+        chunkFilename: 'assets/js/[name]',
+        // publicPath: '/'
     },
-
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all'
+    //     }
+    // },
+    node: {
+        fs: 'empty',
+        dns: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        path: true,
+        url: false
+    },
+    devServer : {
+        contentBase : './public'
+    },
     devtool: 'eval-source-map',
 
-    devServer : {
-        overlay: true
-    },
-
-    resolve: {
-        extensions: ['.js', '.jsx', '.json', '.html', '.pug', '.css', '.scss'],
+    resolveLoader: {
+        moduleExtensions: [ '-loader' ]
     },
 
     module: {
         rules: [
             {
-                test: /\.pug$/,
-                loader: 'pug-loader',
-                options: {
-                    pretty: true
-                }
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
+                })
             },
-            // {
-            //     test: /\.html$/,
-            //     use: ['html-loader']
-            // },
-            // {
-            //     test: /\.html$/,
-            //     use: [{
-            //         loader: 'file-loader',
-            //         options: {
-            //             name: '[name].[ext]',
-            //         }
-            //     }],
-            //     // exclude: path.resolve(__dirname, 'src/views/index.pug')
-            //     exclude: path.resolve(__dirname, 'src/index.html')
-            // },
+            {
+                test: /\.scss$/,
+                use: extractPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: { sourceMap: true }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: { sourceMap: true }
+                        },
+                        { 
+                            loader: 'sass-loader',
+                            options: { sourceMap: true },
+                        }
+                    ],
+                    fallback: 'style-loader'
+                })
+            },
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'es2015']
+                        presets: ['env']
                     }
                 }
             },
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-            {
-               test: /\.(css|scss)$/,
-               use: ExtractTextPlugin.extract({
-                   use: ['css-loader', 'sass-loader']
-               })
-            },
-            {
-               test: /\.(jpg|png|jpeg|gif)$/,
-               use: [{
-                   loader: 'file-loader',
-                   options: {
-                       limit: 10240,
-                       name: '[name].[ext]',
-                       outputPath: 'img/',
-                       publicPath: '../'
-                   }
-               }]
-            },
-            {
-                test: /\.(woff|woff2|ttf|eot|svg|otf)$/,
-                use: [{
-                    loader: 'url-loader',
-                    query: {
-                       limit: 10240,
-                       name: '[name].[ext]',
-                       outputPath: 'fonts/',
-                       publicPath: '../'
-                   }
-               }]
-            },
+                test : /\.(png|gif|jpe?g)$/,
+                loaders: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/img/',
+                            publicPath: '../img/'
+                        },
+                    },
+                    'img-loader',
+                ]
+            }
         ]
     },
+    resolve: {
+        extensions: [ '.js', '.jsx', '.json', '.html', '.pug', '.scss', '.css']
+    },
     plugins: [
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        //     Popper: ['popper.js', 'default'],
-        //     // In case you imported plugins individually, you must also require them here:
-        //     Util: "exports-loader?Util!bootstrap/js/dist/util",
-        //     Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
-        // }),
-        new ExtractTextPlugin("assets/css/style.css"),
-        // new HtmlWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            // filename: './index.html',
-            template: './index1.html'
+
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            Popper: ['popper.js', 'default'],
+            // In case you imported plugins individually, you must also require them here:
+            Util: 'exports-loader?Util!bootstrap/js/dist/util',
+            Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: '../index.html',
-        //     template: './src/views/index.pug'
-        // }),
+
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        }), 
+        new CopyWebpackPlugin(
+            [{
+                from : 'src/assets/img',
+                to: 'assets/img/'
+            }],
+            {
+                ignore : [
+                    {
+                        glob: 'svg/*'
+                    }
+                ]
+            }
+        ),
+        extractPlugin,
+        cleanPlugin,
     ]
 };
+module.exports = config;

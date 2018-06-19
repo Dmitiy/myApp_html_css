@@ -1,7 +1,7 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const fs = require('fs');
+// const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');

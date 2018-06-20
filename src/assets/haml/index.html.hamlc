@@ -12,7 +12,7 @@
           .row
             .col-4
               .input-group.Search-input
-                %span.ico_search
+                %span.sprite.sprite-search
                 %input.border-radius.input-group-lg{:name => "search", :placeholder => "Search goods...", :type => "text"}
             .col-4
               .mx-auto.text-center
@@ -21,13 +21,13 @@
               .User-profile.d-flex.align-items-center.justify-content-end
                 %ul.d-flex.align-items-center.list-unstyled.mb-0
                   %li
-                    %span.ico_favorite
+                    %span.sprite.sprite-favorite
                     %a{:href => "/"} Favorite
                   %li
-                    %span.ico_compare
+                    %span.sprite.sprite-compare
                     %a{:href => "/"} Compare
                   %li
-                    %span.ico_cart
+                    %span.sprite.sprite-cart
                     %a{:href => "/"} Cart
                 %img{:alt => "", :src => "assets/img/Avatar.png"}
       %nav.Menu.nav.d-flex.align-items-center.justify-content-center.border-top.border-bottom
@@ -49,10 +49,10 @@
                   %h2 The Best Place to Play
                   %p.mb-0 Space The Final Frontier
             %a.carousel-control-prev{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
-              %span.ico_arr_left{"aria-hidden" => "true"}
+              %span.sprite.sprite-arrow-back{"aria-hidden" => "true"}
               %span.sr-only Previous
             %a.carousel-control-next{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
-              %span.ico_arr_right{"aria-hidden" => "true"}
+              %span.sprite.sprite-arrow-forward{"aria-hidden" => "true"}
               %span.sr-only Next
       %main
         %section.Switch-interesting.mb-4
@@ -60,7 +60,7 @@
             .row.align-items-center
               .col-4
                 %h4.ml-5
-                  %span.ico_star
+                  %span.sprite.sprite-star
                   Interesting offers
               .col-4.d-flex.align-items-center.justify-content-center
                 .btn-group.btn-group-toggle.btn-filter-3{"data-toggle" => "buttons"}
@@ -77,13 +77,13 @@
                 .dropdown
                   %button#dropdownMenu1.btn.border-radius{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                     Categories
-                    %span.ico_small_angle_down
+                    %span.sprite.sprite-small-angle-down
                   .dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
                     %button.dropdown-item{:type => "button"} Action
                 .dropdown.ml-3
                   %button#dropdownMenu2.btn.border-radius{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                     Date
-                    %span.ico_small_angle_down
+                    %span.sprite.sprite-small-angle-down
                   .dropdown-menu{"aria-labelledby" => "dropdownMenu2"}
                     %button.dropdown-item{:type => "button"} Action
         %section.Products.mt-4.mb-5
@@ -176,17 +176,17 @@
             .row.align-items-center.justify-content-center
               .col-6
                 %p.ml-5.mb-0.text-right
-                  %span.ico_envelope-open
+                  %span.sprite.sprite-envelope-open
                   Learn about profitable offers and get personal recommendations
               .col-6
-                %span.ico_envelope
+                %span.sprite.sprite-envelope
                 .input-group.Subscribe-input-group.ml-5.pl-3
                   %input.form-control.border-radius{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Text", :type => "email"}
                   .input-group-append.d-flex.align-items-center
                     %button.btn.btn-subscribe.border-radius{:type => "button"} Subscribe
         %section.Switch-interesting.mb-5
           %h4.ml-5.mb-5
-            %span.ico_eye
+            %span.sprite.sprite-eye
             Recently viewed products
           .container
             .row.align-items-center
@@ -219,7 +219,7 @@
           .row.mt-5.mb-4
             .col-4
               %h6.mb-4
-                %span.ico_users
+                %span..sprite.sprite-users
                 Users
               .row
                 .col
@@ -238,7 +238,7 @@
                     %a{:href => "/"} Feedback
             .col-4
               %h6.mb-4
-                %span.ico_shopping
+                %span.sprite.sprite-shops
                 Shopping
               .row
                 .col
@@ -257,7 +257,7 @@
                     %a{:href => "/"} Feedback
             .col-4
               %h6.mb-4
-                %span.ico_statistic
+                %span.sprite.sprite-statistic
                 Statistic
               %p.mb-0
                 %strong.mr-2 453 034

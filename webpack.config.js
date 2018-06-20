@@ -45,7 +45,11 @@ module.exports = {
         url: false
     },
     devServer : {
-        contentBase : './public'
+        contentBase : './public',
+        overlay: {
+            warnings: true,
+            errors: true
+        }
     },
     devtool: (isProduction) ? '' : 'inline-source-map',
 
@@ -55,6 +59,7 @@ module.exports = {
 
     module: {
         rules: [
+            { test: /\.html\.hamlc$/, loader: "haml" },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
@@ -109,7 +114,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.js', '.jsx', '.json', '.html', '.pug', '.scss', '.css']
+        extensions: [ '.js', '.jsx', '.json', '.html', '.haml', '.scss', '.css']
     },
     plugins: [
 
@@ -124,7 +129,7 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/assets/haml/index.html.hamlc'
         }), 
         new CopyWebpackPlugin(
             [{

@@ -1,0 +1,272 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %title MarketPlace
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
+  %body
+    .page.mx-auto
+      %header.d-flex.align-items-center
+        .container-fluid
+          .row
+            .col-4
+              .input-group.Search-input
+                %span.ico_search
+                %input.border-radius.input-group-lg{:name => "search", :placeholder => "Search goods...", :type => "text"}
+            .col-4
+              .mx-auto.text-center
+                %img{:alt => "logo", :src => "assets/img/Logo.png"}
+            .col-4
+              .User-profile.d-flex.align-items-center.justify-content-end
+                %ul.d-flex.align-items-center.list-unstyled.mb-0
+                  %li
+                    %span.ico_favorite
+                    %a{:href => "/"} Favorite
+                  %li
+                    %span.ico_compare
+                    %a{:href => "/"} Compare
+                  %li
+                    %span.ico_cart
+                    %a{:href => "/"} Cart
+                %img{:alt => "", :src => "assets/img/Avatar.png"}
+      %nav.Menu.nav.d-flex.align-items-center.justify-content-center.border-top.border-bottom
+        %a.p-0.nav-link{:href => "/"} Electronics
+        %a.p-0.nav-link.active{:href => "/"} Appliances
+        %a.p-0.nav-link{:href => "/"} Children's goods
+        %a.p-0.nav-link{:href => "/"} Repairs
+        %a.p-0.nav-link{:href => "/"} Clothes
+        %a.p-0.nav-link{:href => "/"} Footwear
+        %a.p-0.nav-link{:href => "/"} Beauty
+      .container
+        .row
+          #myCarousel.carousel.slide.mx-auto{"data-ride" => "carousel"}
+            .carousel-inner
+              .carousel-item.active
+                %img.d-block.w-100{:alt => "First slide", :src => "assets/img/slider/Image.png"}
+                .carousel-caption
+                  %span.badge.badge-pill.badge-danger.d-inline-flex.align-items-center.justify-content-center Badge
+                  %h2 The Best Place to Play
+                  %p.mb-0 Space The Final Frontier
+            %a.carousel-control-prev{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+              %span.ico_arr_left{"aria-hidden" => "true"}
+              %span.sr-only Previous
+            %a.carousel-control-next{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+              %span.ico_arr_right{"aria-hidden" => "true"}
+              %span.sr-only Next
+      %main
+        %section.Switch-interesting.mb-4
+          .container
+            .row.align-items-center
+              .col-4
+                %h4.ml-5
+                  %span.ico_star
+                  Interesting offers
+              .col-4.d-flex.align-items-center.justify-content-center
+                .btn-group.btn-group-toggle.btn-filter-3{"data-toggle" => "buttons"}
+                  %label.btn.btn-secondary.border-left-radius
+                    %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}>
+                    Popular
+                  %label.btn.btn-secondary.active
+                    %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}>
+                    Trending
+                  %label.btn.btn-secondary.border-right-radius
+                    %input#option3{:autocomplete => "off", :name => "options", :type => "radio"}>
+                    New
+              .col-4.d-flex.justify-content-end
+                .dropdown
+                  %button#dropdownMenu1.btn.border-radius{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+                    Categories
+                    %span.ico_small_angle_down
+                  .dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
+                    %button.dropdown-item{:type => "button"} Action
+                .dropdown.ml-3
+                  %button#dropdownMenu2.btn.border-radius{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+                    Date
+                    %span.ico_small_angle_down
+                  .dropdown-menu{"aria-labelledby" => "dropdownMenu2"}
+                    %button.dropdown-item{:type => "button"} Action
+        %section.Products.mt-4.mb-5
+          .container
+            .row
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Recommend
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_1.png"}
+                    %p.card-text Asus ZenFone Go ZB452KG
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Bestseller
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_2.png"}
+                    %p.card-text Xiaomi Mi Band 2
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Goods of the week
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_3.png"}
+                    %p.card-text LG 43UH610V
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Recommend
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_4.png"}
+                    %p.card-text Apple iMac 27 Retina 5K
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Recommend
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_5.png"}
+                    %p.card-text Asus ZenFone Go ZB452KG
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    New product
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_6.png"}
+                    %p.card-text Electrolux EZB 52410 AK
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Bestseller
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_7.png"}
+                    %p.card-text Beats studio wireless
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+              .col-3.mb-4
+                .card.border-top-0.text-center
+                  .card-header
+                    Recommended
+                  .card-body.d-flex.flex-column.justify-content-center
+                    %img.mb-4{:alt => "", :src => "assets/img/255x120/shop_img_8.png"}
+                    %p.card-text Nikon D3300 Kit
+                  .card-footer.text-muted
+                    $
+                    %span.amount 384.4
+            .row.justify-content-center.my-3
+              %button.btn.btn-outline-light.border-radius.btn-show-more{:type => "button"} Show More
+        %section.Subscribe.my-5.border-top.border-bottom.py-3
+          .container
+            .row.align-items-center.justify-content-center
+              .col-6
+                %p.ml-5.mb-0.text-right
+                  %span.ico_envelope-open
+                  Learn about profitable offers and get personal recommendations
+              .col-6
+                %span.ico_envelope
+                .input-group.Subscribe-input-group.ml-5.pl-3
+                  %input.form-control.border-radius{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Text", :type => "email"}
+                  .input-group-append.d-flex.align-items-center
+                    %button.btn.btn-subscribe.border-radius{:type => "button"} Subscribe
+        %section.Switch-interesting.mb-5
+          %h4.ml-5.mb-5
+            %span.ico_eye
+            Recently viewed products
+          .container
+            .row.align-items-center
+              .col-3
+                .media.align-items-center
+                  %img.mx-3{:alt => "", :src => "assets/img/80x60/prod_small_1.png"}
+                  .media-body
+                    %h5.mt-0 Apple iPhone 7
+                    %span $ 670
+              .col-3
+                .media.align-items-center
+                  %img.mx-3{:alt => "", :src => "assets/img/80x60/prod_small_2.png"}
+                  .media-body
+                    %h5.mt-0 LG 43UH610V
+                    %span $ 545
+              .col-3
+                .media.align-items-center
+                  %img.mx-3{:alt => "", :src => "assets/img/80x60/prod_small_3.png"}
+                  .media-body
+                    %h5.mt-0 LG G6 H870DS
+                    %span $ 545
+              .col-3
+                .media.align-items-center
+                  %img.mx-3{:alt => "", :src => "assets/img/80x60/prod_small_4.png"}
+                  .media-body
+                    %h5.mt-0 Asus ZenFone
+                    %span $ 545
+      %footer.my-4.border-top
+        .container
+          .row.mt-5.mb-4
+            .col-4
+              %h6.mb-4
+                %span.ico_users
+                Users
+              .row
+                .col
+                  %p
+                    %a{:href => "/"} Payment
+                  %p
+                    %a{:href => "/"} Belivery
+                  %p
+                    %a{:href => "/"} Return and exchangee
+                .col
+                  %p
+                    %a{:href => "/"} Help with the service
+                  %p
+                    %a{:href => "/"} Terms of use
+                  %p
+                    %a{:href => "/"} Feedback
+            .col-4
+              %h6.mb-4
+                %span.ico_shopping
+                Shopping
+              .row
+                .col
+                  %p
+                    %a{:href => "/"} Connectivity
+                  %p
+                    %a{:href => "/"} Help for shops
+                  %p
+                    %a{:href => "/"} Dashboard
+                .col
+                  %p
+                    %a{:href => "/"} Storehouse
+                  %p
+                    %a{:href => "/"} Terms of use
+                  %p
+                    %a{:href => "/"} Feedback
+            .col-4
+              %h6.mb-4
+                %span.ico_statistic
+                Statistic
+              %p.mb-0
+                %strong.mr-2 453 034
+                %span Goods
+              %p.mb-0
+                %strong.mr-2 2 545
+                %span Shops
+        .sub-footer.border-top.d-flex.justify-content-center
+          %p.mb-0.d-flex.align-items-center.justify-content-center
+            %a{:href => "/"} Mobile version
+            %a{:href => "/"} Statistics
+            %a{:href => "/"} Advertising

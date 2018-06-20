@@ -1,18 +1,22 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-// const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 const CleanWebpackPlugin  = require('clean-webpack-plugin');
 const cleanPlugin = new CleanWebpackPlugin(['public']);
+
+const isProduction = (process.env.NODE_ENV === 'production');
 
 const extractPlugin = new ExtractTextPlugin({
     filename: 'assets/css/[name].css'
 });
 
-const config = {
+module.exports = {
 
     entry: {
         app: [
@@ -43,7 +47,7 @@ const config = {
     devServer : {
         contentBase : './public'
     },
-    devtool: 'eval-source-map',
+    devtool: (isProduction) ? '' : 'inline-source-map',
 
     resolveLoader: {
         moduleExtensions: [ '-loader' ]
@@ -139,4 +143,21 @@ const config = {
         cleanPlugin,
     ]
 };
-module.exports = config;
+
+if (isProduction) {
+    module.exports.plugins.push(
+        new UglifyJSPlugin({
+            sourceMap : true  
+        }),
+    );
+    module.exports.plugins.push(
+        new ImageminPlugin({
+            test : /\.(png|jpe?g|gif|svg)$/i
+        }),
+    );
+    module.exports.plugins.push(
+        new webpack.LoaderOptionsPlugin({
+            minimize: true
+        }),
+    );
+}

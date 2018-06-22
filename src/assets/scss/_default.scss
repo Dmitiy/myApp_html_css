@@ -1,0 +1,50 @@
+@import '_vars.scss';
+
+body {
+    font-size: $font-size-default;
+    font-family: $font-family-default;
+    background-color: $bg-body;
+}
+.page {
+    width: $w-page-default;
+    height: 100vh;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $color-80;
+}
+
+footer a,
+.sub-footer p>a {
+    color: $color-b2;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+a:hover,
+.User-profile a:hover,
+.Menu>a:hover,
+footer a:hover,
+.sub-footer p>a:hover {
+    text-decoration: none;
+    color: $color-80;
+    /* font-weight: bold; */
+}
+
+.show>.btn-secondary.dropdown-toggle,
+.btn-secondary:not(:disabled):not(.disabled) {
+    &.active,
+    &:active {
+        background-color: $color-eb;
+        color: $color-b3;
+        border-color: $color-e3;
+    }
+}
+
+.form-control:focus {
+    border-color: $color-eb;
+}

@@ -1,0 +1,33 @@
+@import '_vars.scss';
+
+footer {
+    height: 300px;
+    h6 {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bold;
+        color: $color-80;
+    }
+    &.border-top,
+    .sub-footer.border-top {
+        border-width: 2px !important;
+    }
+    .col p,
+    .col-3 p {
+        text-indent: 54px;
+    }
+    p {
+        strong {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: bold;
+            color: $color-80;
+        }
+        span {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: bold;
+            color: $color-b2;
+        }
+    }
+}

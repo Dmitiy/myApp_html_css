@@ -1,0 +1,34 @@
+@import '_vars.scss';
+
+.Products {
+    .card {
+        border-radius: 0 0 .25em .25em;
+        border-color: rgba(195, 177, 177, 0.125);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .card-header,
+    .card-body,
+    .card-footer {
+        color: $color-80;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .card-header,
+    .card-footer {
+        background: none;
+    }
+    .card-header {
+        height: 59px;
+        border-bottom: 2px solid rgba(195, 177, 177, 0.125);
+    }
+    .card-body {
+        height: 210px;
+    }
+    .card-footer {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 30px;
+        border-top: 2px solid rgba(195, 177, 177, 0.125);
+        height: 60px;
+    }
+}

@@ -1,0 +1,28 @@
+@import '_vars.scss';
+
+.User-profile {
+    margin-top: 2px;
+    a {
+        font-size: 13px;
+        color: $color-999;
+        line-height: 20px;
+    }
+    ul {
+        li+li {
+            margin-left: 23px;
+        }
+    }
+    ul+img {
+        margin-left: 31px;
+        margin-right: 14px;
+    }
+    .sprite-favorite {
+        margin-right: 8px;
+    }
+    .sprite-compare {
+        margin-right: 7px;
+    }
+    .sprite-cart {
+        margin-right: 6px;
+    }
+}

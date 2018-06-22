@@ -1,0 +1,45 @@
+@import '../_vars.scss';
+
+#myCarousel {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    height: 330px;
+    .carousel-caption {
+        top: 54px;
+        bottom: 0;
+        .badge {
+            width: 90px;
+            height: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+        .badge-danger {
+            background-color: $color-badge-danger;
+        }
+        h2 {
+            font-size: 36px;
+            line-height: 30px;
+            margin-bottom: 50px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 25px;
+            opacity: .6;
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        border: 1px solid $color-fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .carousel-control-prev {
+        left: 96px;
+    }
+}

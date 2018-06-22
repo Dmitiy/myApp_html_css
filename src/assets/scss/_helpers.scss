@@ -1,0 +1,17 @@
+@import '_vars.scss';
+
+/* helper classes */
+
+.border-left-radius {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.border-right-radius {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.border-radius {
+    border-radius: 50px;
+}

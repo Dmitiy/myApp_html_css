@@ -1,0 +1,18 @@
+- var links = ['Favorite', 'Compare', 'Cart' ];
+
+mixin li(href, name)
+    li
+        a(href=href)
+            span(class != attributes.class)
+            = name
+
+
+block User-profile
+
+.User-profile.d-flex.align-items-center.justify-content-end
+    ul.d-flex.align-items-center.list-unstyled.mb-0
+        +li('/Favorite', 'Favorite')(class="sprite sprite-favorite")
+        +li('/Compare', 'Compare')(class="sprite sprite-compare ")
+        +li('/Cart', 'Cart')(class="sprite sprite-cart")
+    a.ml-4.mr-3.pr-1(href='/')
+        img(src='assets/img/Avatar.png')

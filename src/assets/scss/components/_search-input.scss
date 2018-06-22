@@ -1,0 +1,19 @@
+@import '_vars.scss';
+
+.Search-input {
+    margin-left: -20px;
+    input[name='search'] {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0 40px 0 80px;
+        color: $color-b2;
+        height: 50px;
+        width: 270px;
+        border: 2px solid $color-f5;
+    }
+    .sprite-search {
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
+}

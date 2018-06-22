@@ -1,0 +1,22 @@
+//- - var menuItems = ['Appliances' , 'Children\'s goods', 'Repairs', 'Clothes' , 'Footwear' , 'Beauty'];
+
+mixin link(href, name)
+    a(href=href)&attributes(attributes)= name
+
+block nav
+
+nav.Menu.nav.d-flex.align-items-center.justify-content-center.border-top.border-bottom
+    +link('/Electronics', 'Electronics')(class="p-0 nav-link")
+    +link('/Appliances', 'Appliances')(class="p-0 nav-link active")
+    +link('/Childrens goods', 'Childrens goods')(class="p-0 nav-link")
+    +link('/Repairs', 'Repairs')(class="p-0 nav-link")
+    +link('/Clothes', 'Clothes')(class="p-0 nav-link")
+    +link('/Footwear', 'Footwear')(class="p-0 nav-link")
+    +link('/Beauty', 'Beauty')(class="p-0 nav-link")
+
+
+//- nav.Menu.nav.d-flex.align-items-center.justify-content-center.border-top.border-bottom
+//-     a.p-0.nav-link.active(href='/') Electronics
+//-     each item in menuItems
+//-         a.p-0.nav-link(href='/')= item
+

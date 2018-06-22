@@ -1,0 +1,27 @@
+@import '_vars.scss';
+
+.Subscribe-input-group {
+    width: 285px;
+    height: 50px;
+    input[type='email'] {
+        padding-left: 75px;
+        padding-right: 110px;
+        font-size: 12px;
+        font-weight: bold;
+        border-width: 2px;
+        color: $color-b2;
+    }
+    .btn-subscribe {
+        color: $color-999;
+        font-size: 12px;
+        font-weight: bold;
+        background: linear-gradient($btn-subscribe-color-from, $btn-subscribe-color-to);
+        margin-left: -98px;
+        width: 95px;
+        height: 40px;
+        z-index: 10;
+    }
+    .btn:not(:disabled):not(.disabled):active {
+        background: linear-gradient($btn-subscribe-color-to, $btn-subscribe-color-from);
+    }
+}

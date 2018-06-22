@@ -1,0 +1,37 @@
+@import '_vars.scss';
+
+.Subscribe {
+    height: 90px;
+    &.border-top {
+        border-top-color: $color-f5 !important;
+        border-top-width: 2px !important;
+    }
+    &.border-bottom {
+        border-bottom-color: $color-eb !important;
+        border-bottom-width: 2px !important;
+    }
+    p {
+        font-size: 14px;
+        color: $color-80;
+        font-weight: bold;
+        line-height: 25px;
+    }
+    .sprite-envelope-open {
+        left: 87px;
+        top: -3px;
+    }
+    .sprite-envelope {
+        left: 70px;
+        z-index: 100;
+    }
+    .input-group> {
+        .input-group-append>.btn {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        .form-control:not(:last-child) {
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+}

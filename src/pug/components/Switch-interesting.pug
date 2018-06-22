@@ -1,0 +1,33 @@
+block Switch-interesting
+
+section.Switch-interesting.mb-4
+    .container
+        .row.align-items-center
+            .col-4
+                h4
+                    span.sprite.sprite-star.mx-3
+                    |	Interesting offers
+            .col-4.d-flex.align-items-center.justify-content-center
+                .btn-group.btn-group-toggle.btn-filter-3.d-flex.align-items-center(data-toggle='buttons')
+                    label.btn.btn-secondary.border-left-radius.d-flex.align-items-center.justify-content-center
+                        input#option1(autocomplete='off', checked='checked', name='options', type='radio')
+                        |	Popular
+                    label.btn.btn-secondary.active.d-flex.align-items-center.justify-content-center
+                        input#option2(autocomplete='off', name='options', type='radio')
+                        |	Trending
+                    label.btn.btn-secondary.border-right-radius.d-flex.align-items-center.justify-content-center
+                        input#option3(autocomplete='off', name='options', type='radio')
+                        | New
+            .col-4.d-flex.justify-content-end
+                .dropdown
+                    button#dropdownMenu1.btn.border-radius(aria-expanded='false', aria-haspopup='true', data-toggle='dropdown', type='button')
+                        | Categories
+                        span.sprite.sprite-small-angle-down.position-relative
+                    .dropdown-menu(aria-labelledby='dropdownMenu1')
+                        button.dropdown-item(type='button') Action
+                .dropdown.ml-2
+                    button#dropdownMenu2.btn.border-radius(aria-expanded='false', aria-haspopup='true', data-toggle='dropdown', type='button')
+                        | Date
+                        span.sprite.sprite-small-angle-down.position-relative
+                    .dropdown-menu(aria-labelledby='dropdownMenu2')
+                        button.dropdown-item(type='button') Action

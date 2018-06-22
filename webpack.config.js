@@ -60,6 +60,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.pug$/,
+                loader: "pug-loader",
+                options: {
+                    pretty: true
+                }
+            },
+            {
                 test: /\.html$/,
                 use: [{
                     loader: 'html-loader',
@@ -123,7 +130,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.js', '.jsx', '.json', '.html', '.haml', '.scss', '.css']
+        extensions: [ '.js', '.jsx', '.json', '.html', '.haml', '.pug', '.scss', '.css']
     },
     plugins: [
 
@@ -136,10 +143,6 @@ module.exports = {
             Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
         }),
 
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/assets/haml/index.html.hamlc'
-        }), 
         new CopyWebpackPlugin(
             [{
                 from : 'src/assets/img',
@@ -153,6 +156,18 @@ module.exports = {
                 ]
             }
         ),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/pug/index.pug'
+        }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'index.html',
+        //     template: './src/haml/index.html.hamlc'
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'header.html',
+        //     template: './src/haml/header/header.html.hamlc'
+        // }),
         extractPlugin,
         cleanPlugin,
     ]

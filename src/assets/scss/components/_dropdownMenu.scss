@@ -1,0 +1,21 @@
+@import '_vars.scss';
+
+#dropdownMenu1,
+#dropdownMenu2 {
+    color: $color-b2;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    border: 2px solid $color-eb;
+    .sprite-small-angle-down {
+        left: 6px;
+    }
+}
+
+#dropdownMenu1 {
+    width: 120px;
+}
+
+#dropdownMenu2 {
+    width: 85px;
+}

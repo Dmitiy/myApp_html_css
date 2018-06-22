@@ -4,7 +4,7 @@
   "description": "html, css",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production --colors --progress --display-error-details",
+    "build": "webpack --mode production",
     "dev": "webpack-dev-server  --mode development --open",
     "prod": "NODE_ENV=production webpack"
   },
@@ -33,11 +33,13 @@
     "file-loader": "^1.1.11",
     "haml-loader": "^0.1.0",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.0.0-alpha",
     "imagemin-webpack-plugin": "^2.1.5",
     "img-loader": "^3.0.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "svg-url-loader": "^2.3.2",

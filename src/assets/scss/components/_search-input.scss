@@ -2,8 +2,14 @@
 
 .Search-input {
     margin-left: -20px;
+    input, label {
+        &:hover {
+            cursor: pointer;
+        }
+    }
     input[name='search'] {
         font-size: 12px;
+        font-family: $Roboto-Bold;
         font-weight: bold;
         padding: 0 40px 0 80px;
         color: $color-b2;

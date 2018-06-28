@@ -1,0 +1,32 @@
+@import '_vars.scss';
+
+.Products-small {
+    margin-bottom: 60px;
+    span.sprite-eye {
+        margin-left: 31px;
+    }
+    h4 {
+        margin-left: 21px;
+    }
+    .media {
+        width: 256px;
+        height: 118px;
+        img {
+            margin-left: 21px;
+            margin-right: 10px;
+        }
+        h5,
+        strong {
+            font-size: 14px;
+            line-height: 25px;
+        }
+        h5 {
+            font-family: $Roboto-Medium;
+        }
+        strong {
+            color: $color-b2;
+            font-family: $Roboto-Bold;
+            font-weight: bold;
+        }
+    }
+}

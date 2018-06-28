@@ -1,4 +1,3 @@
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -31,11 +30,6 @@ module.exports = {
         chunkFilename: 'assets/js/[name]',
         // publicPath: '/'
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all'
-    //     }
-    // },
     node: {
         fs: 'empty',
         dns: 'empty',
@@ -75,7 +69,6 @@ module.exports = {
                     }
                 }],
             },
-            { test: /\.html\.hamlc$/, loader: "haml" },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
@@ -126,11 +119,21 @@ module.exports = {
                     },
                     'img-loader',
                 ]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=assets/fonts/[name].[ext]'
             }
+            // Font Definitions
+            // { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=assets/fonts/[name].[ext]' },
+            // { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=assets/fonts/[name].[ext]' },
+            // { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=assets/fonts/[name].[ext]' },
+            // { test: /\.[ot]tf$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=assets/fonts/[name].[ext]' },
+            // { test: /\.eot$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=assets/fonts/[name].[ext]' }
         ]
     },
     resolve: {
-        extensions: [ '.js', '.jsx', '.json', '.html', '.haml', '.pug', '.scss', '.css']
+        extensions: [ '.js', '.jsx', '.json', '.html', '.pug', '.scss', '.css']
     },
     plugins: [
 
@@ -160,14 +163,7 @@ module.exports = {
             filename: 'index.html',
             template: './src/pug/index.pug'
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'index.html',
-        //     template: './src/haml/index.html.hamlc'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'header.html',
-        //     template: './src/haml/header/header.html.hamlc'
-        // }),
+
         extractPlugin,
         cleanPlugin,
     ]

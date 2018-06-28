@@ -12,11 +12,13 @@
     }
     >a {
         color: $color-999;
+        // font-family: $Roboto-Medium;
     }
     a+a {
         margin-left: 40px;
     }
     .active {
+        font-family: $Roboto-Bold;
         font-weight: bold;
     }
 }

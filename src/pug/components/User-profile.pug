@@ -2,10 +2,8 @@
 
 mixin li(href, name)
     li
-        a(href=href)
-            span(class != attributes.class)
-            = name
-
+        span(class != attributes.class)
+        a(href=href)= name
 
 block User-profile
 
@@ -14,5 +12,5 @@ block User-profile
         +li('/Favorite', 'Favorite')(class="sprite sprite-favorite")
         +li('/Compare', 'Compare')(class="sprite sprite-compare ")
         +li('/Cart', 'Cart')(class="sprite sprite-cart")
-    a.ml-4.mr-3.pr-1(href='/')
+    a.User-profile-img.d-inline-block(href='/')
         img(src='assets/img/Avatar.png')

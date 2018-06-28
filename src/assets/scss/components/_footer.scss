@@ -2,32 +2,68 @@
 
 footer {
     height: 300px;
-    h6 {
-        font-size: 14px;
-        line-height: 25px;
-        font-weight: bold;
-        color: $color-80;
+    .Footer-block {
+        height: 208px;
+        padding-top: 44px;
+        .Block-users {
+            span.sprite {
+                margin-left: 5px;
+            }
+        }
+        .Block-users,
+        .Block-shopping {
+            h6 {
+                margin-bottom: 25px;
+            }
+        }
+        .Block-shopping,
+        .Block-statistic {
+            h6 {
+                margin-left: 10px;
+            }
+            span.sprite {
+                margin-left: -3px;
+            }
+        }
+        .Block-statistic {
+            h6 {
+                margin-bottom: 20px;
+            }
+            p {
+                strong {
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    color: $color-80;
+                }
+
+                span {
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: bold;
+                    color: $color-b2;
+                }
+            }
+        }
+        .Block-users p,
+        .Block-shopping p,
+        .Block-statistic p {
+            margin-bottom: 10px;
+        }
     }
+
     &.border-top,
     .sub-footer.border-top {
         border-width: 2px !important;
     }
-    .col p,
-    .col-3 p {
+
+    .text-indent__1 {
         text-indent: 54px;
     }
-    p {
-        strong {
-            font-size: 16px;
-            line-height: 30px;
-            font-weight: bold;
-            color: $color-80;
-        }
-        span {
-            font-size: 12px;
-            line-height: 20px;
-            font-weight: bold;
-            color: $color-b2;
-        }
+    .text-indent__2 {
+        text-indent: 10px;
+    }
+    .text-indent__3 {
+        text-indent: 27px;
     }
 }

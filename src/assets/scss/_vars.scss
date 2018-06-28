@@ -1,9 +1,34 @@
 //page size
-$w-page-default: 1440px;
+$w-page: 100%;
+$w-page-default: $w-page;
 
-//font
-$font-size-default: 13px;
-$font-family-default: 'Roboto', sans-serif;
+// path
+// $path-img: '../img';
+$path-fonts: '../fonts/Roboto';
+
+
+//font-family Roboto
+$Roboto-Black: 'Roboto-Black';
+$Roboto-BlackItalic: 'Roboto-BlackItalic';
+$Roboto-Bold: 'Roboto-Bold';
+$Roboto-BoldItalic: 'Roboto-BoldItalic';
+$Roboto-Light: 'Roboto-Light';
+$Roboto-LightItalic: 'Roboto-LightItalic';
+$Roboto-Italic: 'Roboto-Italic';
+$Roboto-Medium: 'Roboto-Medium';
+$Roboto-MediumItalic: 'Roboto-MediumItalic';
+$Roboto-Regular: 'Roboto-Regular';
+$Roboto-Thin: 'Roboto-Thin';
+$Roboto-ThinItalic: 'Roboto-ThinItalic';
+
+$font-size: 13px;
+$font-family: 'Roboto', 'Helvetica', 'PT Sans', sans-serif;
+
+$font-default: $font-family;
+$font-size-default: $font-size;
+
+
+
 
 //colors pallete
 
@@ -16,7 +41,7 @@ $color-999: #999;
 $color-fff: #fff;
 $color-80: #808080;
 
-
+$color-h4: $color-80;
 //body
 $bg-body: $color-fff;
 //carousel badge

@@ -1,34 +1,43 @@
 @import '_vars.scss';
 
 .Products {
+    margin-bottom: 35px;
     .card {
         border-radius: 0 0 .25em .25em;
         border-color: rgba(195, 177, 177, 0.125);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 38px;
     }
-    .card-header,
-    .card-body,
-    .card-footer {
+    .card-header span,
+    .card-body p {
+        
+        font-family: $Roboto-Medium;
+    }
+    .card-header span,
+    .card-body p,
+    .card-footer span {
         color: $color-80;
-        font-size: 13px;
-        line-height: 20px;
     }
     .card-header,
     .card-footer {
         background: none;
     }
     .card-header {
-        height: 59px;
+        height: 45px;
+        font-size: 13px;
+        line-height: 20px;
         border-bottom: 2px solid rgba(195, 177, 177, 0.125);
     }
     .card-body {
-        height: 210px;
+        height: 215px;
+        font-size: 14px;
+        line-height: 25px;
     }
     .card-footer {
         font-size: 16px;
+        font-family: $Roboto-Bold;
         font-weight: bold;
         line-height: 30px;
         border-top: 2px solid rgba(195, 177, 177, 0.125);
-        height: 60px;
+        height: 59px;
     }
 }

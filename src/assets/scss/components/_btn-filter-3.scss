@@ -11,6 +11,7 @@
         height: 40px;
         &:first-of-type {
             width: 84px;
+            padding-left: 22px;
         }
         &:nth-of-type(2) {
             width: 88px;
@@ -19,4 +20,9 @@
             width: 68px;
         }
     }
+}
+.btn-secondary:hover {
+    color: $color-80;
+    background-color: $color-eb;
+    border-color: $color-e3;
 }

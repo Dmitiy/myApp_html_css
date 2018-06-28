@@ -1,21 +1,26 @@
 @import '_vars.scss';
 
 #dropdownMenu1,
-#dropdownMenu2 {
+#dropdownMenu2,
+.dropdown-menu {
     color: $color-b2;
     font-size: 12px;
+    font-family: $Roboto-Bold;
     font-weight: bold;
     height: 40px;
     border: 2px solid $color-eb;
-    .sprite-small-angle-down {
-        left: 6px;
-    }
 }
 
 #dropdownMenu1 {
     width: 120px;
+     .sprite-small-angle-down {
+        left: 18px;
+    }
 }
 
 #dropdownMenu2 {
     width: 85px;
+    .sprite-small-angle-down {
+        left: 6px;
+    }
 }

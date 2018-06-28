@@ -2,27 +2,53 @@
 
 body {
     font-size: $font-size-default;
-    font-family: $font-family-default;
+    font-family: $font-default;
     background-color: $bg-body;
 }
+
 .page {
     width: $w-page-default;
     height: 100vh;
+    max-width: 1440px;
 }
 
+h2 {
+    font-family: $Roboto-Bold;
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 50px;
+    color: $color-fff;
+}
+h4, h5 {
+    font-family: $Roboto-Medium;
+    font-weight: 500;
+}
 h4 {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 500;
-    color: $color-80;
+    color: $color-h4;
 }
 
+h5, h6 {
+    color: $color-80;
+}
+h6 {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+    font-family: $Roboto-Bold;
+}
+.Menu > a,
+footer a,
+.sub-footer p>a {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: $Roboto-Medium;
+    font-weight: 500;
+}
 footer a,
 .sub-footer p>a {
     color: $color-b2;
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 500;
 }
 
 a:hover,
@@ -32,7 +58,7 @@ footer a:hover,
 .sub-footer p>a:hover {
     text-decoration: none;
     color: $color-80;
-    /* font-weight: bold; */
+    /* font-family: $Roboto-Medium; */
 }
 
 .show>.btn-secondary.dropdown-toggle,

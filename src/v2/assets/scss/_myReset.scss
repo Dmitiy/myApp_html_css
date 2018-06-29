@@ -8,12 +8,16 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 a {
-    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
 }
 a, input, label, button {
     &:hover {
         cursor: pointer;
     }
+}
+a, input, button {
     &:focus,
     &:active {
         outline: none;

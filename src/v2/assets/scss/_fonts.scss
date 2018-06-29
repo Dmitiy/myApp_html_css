@@ -1,0 +1,21 @@
+@import '_vars.scss';
+
+@each $font-family in Roboto-Black,
+Roboto-BlackItalic,
+Roboto-Bold,
+Roboto-BoldItalic,
+Roboto-Light,
+Roboto-LightItalic,
+Roboto-Italic,
+Roboto-Medium,
+Roboto-MediumItalic,
+Roboto-Regular,
+Roboto-Thin,
+Roboto-ThinItalic {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url("#{$path-fonts}/#{$font-family}.ttf");
+        font-weight: normal;
+        font-style: normal;
+    }
+}

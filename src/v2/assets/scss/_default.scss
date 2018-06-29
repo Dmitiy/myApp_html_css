@@ -1,0 +1,13 @@
+@import '_vars.scss';
+
+body {
+    font-size: $font-size-default;
+    font-family: $font-default;
+    background-color: $bg-body;
+}
+
+.page {
+    width: $w-page-default;
+    height: 100vh;
+    max-width: 1440px;
+}

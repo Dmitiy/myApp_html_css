@@ -1,0 +1,15 @@
+block Subscribe
+
+section.Subscribe.border-top.border-bottom.d-flex.align-items-center
+    .container
+        .row.align-items-center
+            .col-7
+                p.mb-0.position-relative
+                    span.sprite.sprite-envelope-open.position-absolute
+                    | Learn about profitable offers and get personal recommendations
+            .col-5.d-flex.align-items-center.position-relative
+                .Subscribe-input-group.input-group.position-relative.border-radius
+                    label(for='email').sprite.sprite-envelope.position-absolute.mb-0
+                    input#email.form-control.border-radius(placeholder='Email', type='email')
+                    .input-group-append.d-flex.align-items-center
+                        button.btn.btn-subscribe.border-radius(type='button') Subscribe

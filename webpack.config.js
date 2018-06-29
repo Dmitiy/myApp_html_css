@@ -19,8 +19,8 @@ module.exports = {
 
     entry: {
         app: [
-            './src/v1/index.js',
-            './src/v1/assets/scss/style.scss',
+            './src/v2/index.js',
+            './src/v2/assets/scss/style.scss',
         ]
     },
 
@@ -161,7 +161,7 @@ module.exports = {
         // ),
         new CopyWebpackPlugin(
             [{
-                from : 'src/v1/assets/img',
+                from : 'src/v2/assets/img',
                 to: 'assets/img/'
             }],
             {
@@ -178,7 +178,7 @@ module.exports = {
         // }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/v1/pug/index.pug'
+            template: './src/v2/pug/index.pug'
         }),
 
         extractPlugin,

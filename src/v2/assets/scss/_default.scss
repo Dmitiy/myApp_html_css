@@ -13,6 +13,18 @@ body {
     margin: 0 auto;
 }
 
+h1 {}
+h2 {
+    font-size: 36px;
+    font-family: $Roboto-Bold;
+    font-weight: bold;
+    line-height: 30px;
+    color: $color-fff;
+}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
 //DRY
 header a,
 nav a {

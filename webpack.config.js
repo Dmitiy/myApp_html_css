@@ -137,28 +137,15 @@ module.exports = {
     },
     plugins: [
 
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        //     Popper: ['popper.js', 'default'],
-        //     // In case you imported plugins individually, you must also require them here:
-        //     Util: 'exports-loader?Util!bootstrap/js/dist/util',
-        //     Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
-        // }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            Popper: ['popper.js', 'default'],
+            // In case you imported plugins individually, you must also require them here:
+            Util: 'exports-loader?Util!bootstrap/js/dist/util',
+            Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
+        }),
 
-        // new CopyWebpackPlugin(
-        //     [{
-        //         from : 'src/v1/assets/img',
-        //         to: 'assets/img/'
-        //     }],
-        //     {
-        //         ignore : [
-        //             {
-        //                 glob: 'svg/*'
-        //             }
-        //         ]
-        //     }
-        // ),
         new CopyWebpackPlugin(
             [{
                 from : 'src/v2/assets/img',
@@ -172,10 +159,7 @@ module.exports = {
                 ]
             }
         ),
-        // new HtmlWebpackPlugin({
-        //     filename: 'index.html',
-        //     template: './src/v1/pug/index.pug'
-        // }),
+
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/v2/pug/index.pug'

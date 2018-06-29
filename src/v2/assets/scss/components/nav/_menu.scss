@@ -1,0 +1,18 @@
+@import '_vars.scss';
+
+nav {
+    &.Menu {
+        height: 62px;
+        a {
+            + a {
+                margin-left: 40px;
+            }
+            line-height: 20px;
+            font-size: 13px;
+            &.active {
+                font-family: $Roboto-Bold;
+                font-weight: bold;
+            }
+        }
+    }
+}

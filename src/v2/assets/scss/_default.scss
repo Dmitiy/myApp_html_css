@@ -1,13 +1,21 @@
 @import '_vars.scss';
 
 body {
-    font-size: $font-size-default;
-    font-family: $font-default;
-    background-color: $bg-body;
+    font-size: $font-size-default;      // 13px
+    font-family: $font-default;         // Roboto
+    background-color: $bg-body;         // #fff
 }
 
 .page {
-    width: $w-page-default;
+    width: $w-page-default;            // 100%
     height: 100vh;
     max-width: 1440px;
+    margin: 0 auto;
+}
+
+//DRY
+header a,
+nav a {
+    color: $color-999;
+    font-family: $Roboto-Medium;
 }

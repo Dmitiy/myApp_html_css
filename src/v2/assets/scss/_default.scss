@@ -13,7 +13,6 @@ body {
     margin: 0 auto;
 }
 
-h1 {}
 h2 {
     font-size: 36px;
     font-family: $Roboto-Bold;
@@ -21,13 +20,55 @@ h2 {
     line-height: 30px;
     color: $color-fff;
 }
-h3 {}
-h4 {}
+h4 {
+   font-size: 18px;
+   font-family: $Roboto-Medium;
+   font-weight: 500;
+   line-height: 30px;
+   color: $color-80;
+}
 h5 {}
 h6 {}
+
+input,
+button {
+    color: $color-b2;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $color-eb;
+    font-size: 12px;
+}
+
+a {
+    &:hover {
+        font-weight: 500;
+        color: $color-80;
+    }
+}
+
+section {
+    h4 {
+        span.sprite {
+            margin-left: 15px;
+            margin-right: 20px;
+        }
+    }
+}
+
 //DRY
 header a,
 nav a {
     color: $color-999;
     font-family: $Roboto-Medium;
+}
+
+.btn-filter-3 label, 
+.btn {
+    font-size: 12px;
+    font-family: $Roboto-Bold;
+    font-weight: bold;
+    color: $color-b2;
+    height: 40px;
+    border: 2px solid $color-eb;
+    text-align: center;
 }

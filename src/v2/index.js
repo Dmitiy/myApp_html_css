@@ -16,6 +16,6 @@ $(document).ready(function () {
         nextSelector: '.next',
         prevSelector: '.prev',
         stopAutoOnClick: true,
-        slideWidth: 1110
+        slideWidth: 1080
     });
 });

@@ -3,27 +3,17 @@
 ul, ol, ul ul, ol ol {
     list-style-type: none;
 }
-ul, ol, p, label {
+ul, ol, p, label,
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 a {
-    &:hover {
-        font-weight: 500;
-        color: $color-80;
-        text-decoration: none;
-    }
+    text-decoration: none;
 }
 a, input, label, button {
     &:hover {
         cursor: pointer;
     }
-}
-input, button {
-    color: $color-b2;
-    border-width: 2px;
-    border-style: solid;
-    border-color: $color-eb;
-    font-size: 12px;
     &:focus,
     &:active {
         outline: none;

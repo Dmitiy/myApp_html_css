@@ -2,10 +2,19 @@
 
 /* helper classes */
 
+//wrapper
+.wrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 // box-shadow
 .box-shadow {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+//btn
 
 //border
 .border-top {
@@ -47,7 +56,4 @@
 }
 .text-right {
     text-align: right;
-}
-.text-justify {
-    text-align: justify;
 }

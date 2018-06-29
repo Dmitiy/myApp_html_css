@@ -1,0 +1,26 @@
+@import '_vars.scss';
+
+.btn-filter-3 {
+    label {
+        &.active,
+        &:hover {
+            background-color: $color-fa;
+        }
+        &:first-child {
+            width: 85px;
+            padding-left: 10px;
+        }
+        &:nth-child(2) {
+            width: 90px;
+            margin-left: -2px;
+        }
+        &:nth-child(3) {
+            width: 69px;
+            margin-left: -2px;
+            padding-right: 10px;
+        }
+    }
+    input[type='radio'] {
+        display: none;
+    }
+}

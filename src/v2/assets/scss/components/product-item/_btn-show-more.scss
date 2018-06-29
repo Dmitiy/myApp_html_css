@@ -1,0 +1,14 @@
+@import '_vars.scss';
+
+.btn-show-more {
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    font-family: $Roboto-Bold;
+    font-weight: bold;
+    text-align: center;
+    &:hover {
+       background-color: $color-fa;
+       color: $color-80;
+    }
+}

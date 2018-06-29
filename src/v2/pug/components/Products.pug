@@ -1,33 +1,35 @@
-mixin card-item(title, src, name, price)
-    .card.border-top-0.text-center.box-shadow
-        .card-header
+mixin card-item(href, title, src, name, price)
+
+    a.card.text-center.box-shadow(href=href)
+        .card-header.d-flex.align-items-center.justify-content-center
             span= title
-        .card-body.p-0.d-flex.flex-column.justify-content-center
-            img.mb-4.mt-2(src= src)
-            p.mb-0= name
-        .card-footer
+        .card-body.d-flex.flex-column.align-items-center.justify-content-center.border-top
+            img(src= src)
+            p= name
+        .card-footer.border-top.d-flex.align-items-center.justify-content-center
             span.amount= price
 
 block Products
 
-section.Products.mt-4
-    .container
-        .row
-            .col-3
-                +card-item('Recommend', 'assets/img/255x120/shop_img_1.png', 'Asus ZenFone Go ZB452KG', '$ 384.4')
-            .col-3
-                +card-item('Bestseller', 'assets/img/255x120/shop_img_2.png', 'Xiaomi Mi Band 2', '$ 384.4')
-            .col-3
-                +card-item('Goods of the week', 'assets/img/255x120/shop_img_3.png', 'LG 43UH610V', '$ 384.4')
-            .col-3
-                +card-item('Recommend', 'assets/img/255x120/shop_img_4.png', 'Apple iMac 27 Retina 5K', '$ 384.4')
-            .col-3
-                +card-item('New product', 'assets/img/255x120/shop_img_5.png', 'Asus ZenFone Go ZB452KG', '$ 384.4')
-            .col-3
-                +card-item('Recommend', 'assets/img/255x120/shop_img_6.png', 'Electrolux EZB 52410 AK', '$ 384.4')
-            .col-3
-                +card-item('Bestseller', 'assets/img/255x120/shop_img_7.png', 'Beats studio wireless', '$ 384.4')
-            .col-3
-                +card-item('Recommend', 'assets/img/255x120/shop_img_8.png', 'Nikon D3300 Kit', '$ 384.4')
-        .row.justify-content-center
-            include ../elements/btn-show-more
+section.Products
+    .wrapper
+        .container
+            .row.justify-content-between
+                .col-3
+                    +card-item('#', 'Recommend', 'assets/img/255x120/shop_img_1.png', 'Asus ZenFone Go ZB452KG', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Bestseller', 'assets/img/255x120/shop_img_2.png', 'Xiaomi Mi Band 2', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Goods of the week', 'assets/img/255x120/shop_img_3.png', 'LG 43UH610V', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Recommend', 'assets/img/255x120/shop_img_4.png', 'Apple iMac 27 Retina 5K', '$ 384.4')
+                .col-3
+                    +card-item('#', 'New product', 'assets/img/255x120/shop_img_5.png', 'Asus ZenFone Go ZB452KG', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Recommend', 'assets/img/255x120/shop_img_6.png', 'Electrolux EZB 52410 AK', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Bestseller', 'assets/img/255x120/shop_img_7.png', 'Beats studio wireless', '$ 384.4')
+                .col-3
+                    +card-item('#', 'Recommend', 'assets/img/255x120/shop_img_8.png', 'Nikon D3300 Kit', '$ 384.4')
+            .row.justify-content-center
+                include ../elements/btn-show-more

@@ -1,0 +1,50 @@
+@import '_vars.scss';
+
+.Products {
+    margin-top: 40px;
+    margin-bottom: 35px;
+    .col-3 {
+        flex: 0 0 calc(25% - 24px);
+        width: calc(25% - 24px);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .card {
+        color: $color-80;
+        margin-bottom: 30px;
+        height: 330px;
+        width: 100%;
+        .card-header span,
+        .card-body p {
+            font-family: $Roboto-Medium;
+            font-weight: 500;
+        }
+        .card-header {
+            height: 50px;
+            span {
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+        .card-body {
+            height: 220px;
+            padding: 24px 0;
+            img {
+                margin-bottom: 24px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+        .card-footer {
+            height: 60px;
+            span {
+               font-size: 16px;
+               line-height: 20px;
+               font-family: $Roboto-Bold;
+               font-weight: bold;
+            }
+        }
+    }
+}

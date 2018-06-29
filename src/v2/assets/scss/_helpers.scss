@@ -1,0 +1,53 @@
+@import '_vars.scss';
+
+/* helper classes */
+
+// box-shadow
+.box-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+//border
+.border-top {
+    border-top: 2px solid $color-f5;
+}
+.border-bottom {
+    border-bottom: 2px solid $color-eb;
+}
+//border-radius
+.border-left-radius {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.border-right-radius {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.border-radius {
+    border-radius: 50px !important;
+}
+
+//position
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position: fixed;
+}
+
+//text-align
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}

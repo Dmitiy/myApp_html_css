@@ -1,0 +1,31 @@
+@import '_vars.scss';
+
+ul, ol, ul ul, ol ol {
+    list-style-type: none;
+}
+ul, ol, p, label {
+    margin: 0;
+}
+a {
+    &:hover {
+        font-weight: 500;
+        color: $color-80;
+        text-decoration: none;
+    }
+}
+a, input, label, button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+input, button {
+    color: $color-b2;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $color-eb;
+    font-size: 12px;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}

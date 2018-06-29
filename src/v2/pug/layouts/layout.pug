@@ -1,0 +1,17 @@
+- var title = 'MarketPlace';
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include ../includes/meta
+        title #{title}
+    body
+        .page
+            header.d-flex.align-items-center
+                include ../components/header
+            include ../components/nav
+            //- include ../components/myCarousel
+            main
+                block content
+            //- footer
+            //-     include ../components/footer

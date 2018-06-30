@@ -16,8 +16,7 @@
         width: 100%;
         .card-header span,
         .card-body p {
-            font-family: $Roboto-Medium;
-            font-weight: 500;
+            font-family: 'Roboto-Medium';
         }
         .card-header {
             height: 50px;
@@ -42,8 +41,7 @@
             span {
                font-size: 16px;
                line-height: 20px;
-               font-family: $Roboto-Bold;
-               font-weight: bold;
+               font-family: 'Roboto-Bold';
             }
         }
     }

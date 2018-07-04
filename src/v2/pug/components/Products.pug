@@ -1,11 +1,11 @@
 mixin card-item(href, title, src, name, price)
 
-    a.card.text-center.box-shadow(href=href)
+    a.card.d-block.text-center.box-shadow(href=href)
         .card-header.d-flex.align-items-center.justify-content-center
             span= title
-        .card-body.d-flex.flex-column.align-items-center.justify-content-center.border-top
+        .card-body.text-center.border-top
             img(src= src)
-            p= name
+            p.text-truncate= name
         .card-footer.border-top.d-flex.align-items-center.justify-content-center
             span.amount= price
 

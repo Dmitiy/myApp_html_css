@@ -1,9 +1,35 @@
 @import '_vars.scss';
 
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased !important;  
+    box-sizing: border-box;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+*::selection {
+    background: orange;
+    color: #fff;
+}
+
+html,
 body {
-    font-size: $font-size-default;      // 13px
-    font-family: $font-default;         // Roboto
-    background-color: $bg-body;         // #fff
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 14px;
+    font-weight: normal;
+    text-size-adjust: 100%;
+}
+body {
+    font-weight: normal;
+    font-size: $font-size-default; // 13px
+    font-family: $font-default; // Roboto
+    background-color: $bg-body;
 }
 
 .page {
@@ -13,22 +39,33 @@ body {
     margin: 0 auto;
 }
 
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }
 h2 {
     font-size: 36px;
     font-family: 'Roboto-Bold';
-    font-weight: bold;
     line-height: 30px;
     color: $color-fff;
 }
 h4 {
    font-size: 18px;
    font-family: 'Roboto-Medium';
-   font-weight: 500;
    line-height: 30px;
    color: $color-80;
 }
 h5 {}
 h6 {}
+
+a,
+input,
+button {
+    &:focus,
+    &:hover {
+        transition: all linear .2s;
+    }
+}
 
 input,
 button {
@@ -41,19 +78,18 @@ button {
 
 a {
     &:hover {
-        font-weight: 500;
+        font-family: 'Roboto-Medium';
         color: $color-80;
     }
 }
 
-section {
-    h4 {
-        span.sprite {
-            margin-left: 15px;
-            margin-right: 20px;
-        }
+h4 {
+    span.sprite {
+        margin-left: 15px;
+        margin-right: 20px;
     }
 }
+
 
 //DRY
 header a,
@@ -61,8 +97,13 @@ nav a {
     color: $color-999;
     font-family: 'Roboto-Medium';
 }
+.Logo img,
+.User-profile-img img {
+    width: 40px;
+    height: 40px;
+}
 
-.btn-filter-3 label, 
+.btn-filter-3 button, 
 .btn {
     font-size: 12px;
     font-family: 'Roboto-Bold';

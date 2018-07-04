@@ -63,3 +63,10 @@
 .text-right {
     text-align: right;
 }
+// text-ellipsis
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

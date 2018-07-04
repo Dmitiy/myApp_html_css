@@ -31,7 +31,6 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
-    "haml-loader": "^0.1.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^4.0.0-alpha",
     "imagemin-webpack-plugin": "^2.1.5",
@@ -53,6 +52,7 @@
     "bootstrap": "^4.0.0",
     "bxslider": "^4.2.13",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "slick-carousel": "^1.8.1"
   }
 }

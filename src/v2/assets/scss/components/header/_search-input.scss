@@ -15,7 +15,13 @@
         height: 50px;
         line-height: 50px;
         border: 2px solid $color-f5;
-        padding-left: 81px;
+        padding-left: 60px;
         padding-right: 20px;
+        text-indent: 20px;
+        &:focus {
+            background-color: $color-fa;
+            border: 2px solid $color-eb;
+            color: $color-80;
+        }
     }
 }

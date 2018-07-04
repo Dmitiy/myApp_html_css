@@ -18,10 +18,5 @@
         padding-left: 60px;
         padding-right: 20px;
         text-indent: 20px;
-        &:focus {
-            background-color: $color-fa;
-            border: 2px solid $color-eb;
-            color: $color-80;
-        }
     }
 }

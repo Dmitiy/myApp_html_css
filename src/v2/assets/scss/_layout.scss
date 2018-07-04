@@ -8,14 +8,15 @@
 @import 'components/carousel/_myCarousel.scss';
 @import 'components/carousel/_badge.scss';
 
-@import 'components/group-btns/_btn-filter-3.scss';
+@import 'components/buttons/_btn-filter-3.scss';
 @import 'components/group-btns/_dropdown.scss';
 
 @import 'components/product-item/_products.scss';
-@import 'components/product-item/_btn-show-more.scss';
-// @import 'components/_products-small.scss';
 
-// @import 'components/_subscribe.scss';
-// @import 'components/_subscribe-input-group.scss';
-// @import 'components/_footer.scss';
-// @import 'components/_sub-footer.scss';
+@import 'components/subscribe/_subscribe.scss';
+@import 'components/subscribe/_subscribe-input-group.scss';
+
+@import 'components/product-item/_products-small.scss';
+
+@import 'components/footer/_footer.scss';
+@import 'components/footer/_sub-footer.scss';

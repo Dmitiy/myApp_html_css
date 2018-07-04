@@ -1,9 +1,6 @@
 @import '_vars.scss';
 
 .dropdown {
-    .btn {
-        text-align: left;
-    }
     #dropdownMenu1 {
         width: 120px;
         padding-left: 12px;
@@ -13,7 +10,7 @@
     }
     #dropdownMenu2 {
         width: 85px;
-        margin-left: 12px;
+        margin-left: 10px;
         padding-left: 25px;
         .sprite-small-angle-down {
             left: 5px;

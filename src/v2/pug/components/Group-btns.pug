@@ -1,21 +1,20 @@
 block Group-btns
 
 section
-    .wrapper
-        .container
-            .row.align-items-center
-                .col-4
-                    h4
-                        span.sprite.sprite-star
-                        | Interesting offers
-                .col-4.d-flex.align-items-center.justify-content-center
-                    include ../elements/btn-group-3
-                .col-4.d-flex.justify-content-end
-                    .dropdown
-                        button#dropdownMenu1.btn.border-radius.text-left(type='button')
-                            | Categories
-                            span.sprite.sprite-small-angle-down.position-relative
-                    .dropdown
-                        button#dropdownMenu2.btn.border-radius(type='button')
-                            | Date
-                            span.sprite.sprite-small-angle-down.position-relative
+    .container
+        .row.align-items-center
+            .col-4
+                h4
+                    span.sprite.sprite-star
+                    | Interesting offers
+            .col-4.d-flex.align-items-center.justify-content-center
+                include ../elements/btn-group-3
+            .col-4.d-flex.justify-content-end
+                .dropdown
+                    button#dropdownMenu1.border-radius.text-left(type='button')
+                        | Categories
+                        span.sprite.sprite-small-angle-down.position-relative
+                .dropdown
+                    button#dropdownMenu2.border-radius.text-left(type='button')
+                        | Date
+                        span.sprite.sprite-small-angle-down.position-relative

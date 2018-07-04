@@ -1,58 +1,61 @@
 block footer
 
-.Footer-block
+.Footer-block.border-bottom
     .container
         .row
             .col-5
                 .Block-users
-                    span.mr-3.sprite.sprite-users
-                    h6.d-inline-block Users
+                    h6
+                        span.sprite.sprite-users
+                        | Users
                     .row
                         .col
-                            p.text-indent__1
+                            p.text-indent__57
                                 a(href='/') Payment
-                            p.text-indent__1
-                                a(href='/') Belivery
-                            p.text-indent__1
+                            p.text-indent__57
+                                a(href='/') Delivery
+                            p.text-indent__57
                                 a(href='/') Return and exchangee
                         .col
-                            p.text-indent__2
+                            p.text-indent__10
                                 a(href='/') Help with the service
-                            p.text-indent__2
+                            p.text-indent__10
                                 a(href='/') Terms of use
-                            p.text-indent__2
+                            p.text-indent__10
                                 a(href='/') Feedback
             .col-4
                 .Block-shopping
-                    span.sprite.sprite-shops.mr-3
-                    h6.d-inline-block Shopping
+                    h6
+                        span.sprite.sprite-shops
+                        | Shopping
                     .row
                         .col
-                            p.text-indent__1
+                            p.text-indent__57
                                 a(href='/') Connectivity
-                            p.text-indent__1
+                            p.text-indent__57
                                 a(href='/') Help for shops
-                            p.text-indent__1
+                            p.text-indent__57
                                 a(href='/') Dashboard
                         .col
-                            p.text-indent__3
+                            p.text-indent__27
                                 a(href='/') Storehouse
-                            p.text-indent__3
+                            p.text-indent__27
                                 a(href='/') Terms of use
-                            p.text-indent__3
+                            p.text-indent__27
                                 a(href='/') Feedback
             .col-3
                 .Block-statistic
-                    span.sprite.sprite-statistic.mr-3
-                    h6.d-inline-block Statistic
-                    p.mb-0.text-indent__1
-                        strong.mr-2 453 034
+                    h6
+                        span.sprite.sprite-statistic
+                        | Statistic
+                    p.text-indent__57
+                        strong 453 034
                         span Goods
-                    p.mb-0.text-indent__1
-                        strong.mr-2 2 545
+                    p.text-indent__57
+                        strong 2 545
                         span Shops
-.sub-footer.border-top.d-flex.justify-content-center
-    p.mb-0.d-flex.align-items-center.justify-content-center
+.sub-footer
+    nav.text-center
         a(href='/') Mobile version
         a(href='/') Statistics
         a(href='/') Advertising

@@ -1,0 +1,57 @@
+@import '_vars.scss';
+
+footer {
+    h6 {
+        margin-bottom: 18px;
+    }
+    a {
+        color: $color-b2;
+    }
+}
+.Footer-block {
+    padding-top: 45px;
+    padding-bottom: 35px;
+    p + p {
+        margin-top: 10px;
+    }
+    .Block-users {
+        span.sprite-users {
+            margin-left: 8px;
+            margin-right: 20px;
+        }
+    }
+
+    .Block-shopping {
+        span.sprite-shops {
+            margin-right: 26px;
+        }
+    }
+
+    .Block-statistic {
+        span.sprite-statistic {
+            margin-right: 24px;
+        }
+        h6 {
+            margin-bottom: 13px;
+        }
+        p {
+            font-family: 'Roboto-Bold';
+            + p {
+                margin-top: 0;
+            }
+            strong {
+                font-size: 16px;
+                line-height: 30px;
+                font-family: inherit;
+                color: $color-80;
+                margin-right: 10px;
+            }
+            span {
+                font-size: 12px;
+                line-height: 20px;
+                font-family: inherit;
+                color: $color-b2;
+            }
+        }
+    }
+}

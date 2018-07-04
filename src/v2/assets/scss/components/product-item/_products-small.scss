@@ -1,0 +1,35 @@
+@import '_vars.scss';
+
+.Products-small {
+    margin-bottom: 60px;
+    span.sprite {
+        margin-left: 32px;
+    }
+    h4 {
+        margin-left: 20px;
+        margin-bottom: 43px;
+    }
+    .card-item-small {
+        height: 120px;
+        width: 100%;
+        max-width: 255px;
+        padding: 30px 20px;
+        img {
+            width: 80px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        .card-body {
+            margin-top: 2px;
+            h5 {
+                margin-bottom: 10px;
+            }
+            strong {
+                font-size: 14px;
+                line-height: 25px;
+                font-family: 'Roboto-Bold';
+                color: $color-b2;
+            }
+        }
+    }
+}

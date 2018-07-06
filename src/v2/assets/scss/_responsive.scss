@@ -69,6 +69,7 @@
 @media (max-width: 768px) {
    
     .myCarousel {
+        margin: 15px auto 20px;
         .caption {
             h2 {
                 margin-top: 20px;
@@ -96,7 +97,27 @@
             }
         }
     }
+    main {
+        margin-top: 20px;
+    }
+    .Products {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .Subscribe {
+        margin-bottom: 20px;
+    }
+    .Products-small {
+        margin-bottom: 20px;
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
     footer {
+        .Footer-block {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
         .Block-users,
         .Block-shopping {
             .col-xl-6+.col-xl-6 {

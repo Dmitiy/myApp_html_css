@@ -1,12 +1,11 @@
 @import '_vars.scss';
 
-nav {
-    &.Menu {
-        height: 62px;
-        a {
-            &.active {
-                font-family: 'Roboto-Bold';
-            }
+.Menu {
+    height: 62px;
+    a {
+        &.active {
+            font-family: 'Roboto-Bold';
         }
     }
 }
+

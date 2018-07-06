@@ -1,6 +1,10 @@
 @import '_vars.scss';
 
 .btn-filter-3 {
+    width: 240px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
     button {
         &.active, &:hover {
             background-color: $color-fa;

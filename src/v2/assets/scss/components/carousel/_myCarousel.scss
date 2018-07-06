@@ -3,8 +3,8 @@
 .myCarousel {
     margin: 30px auto 39px;
     position: relative;
-    width: 1080px;
-    height: 330px;
+    width: 100%;
+    max-width: 1080px;
     .caption {
         position: absolute;
         top: 172px;
@@ -30,9 +30,6 @@
     }
     .bx-prev,
     .bx-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         position: absolute;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);

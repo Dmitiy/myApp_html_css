@@ -1,7 +1,8 @@
 @import '_vars.scss';
 
 .Search-input {
-    width: 270px;
+    width: 100%;
+    max-width: 270px;
     height: 50px;
     label {
         top: 10px;

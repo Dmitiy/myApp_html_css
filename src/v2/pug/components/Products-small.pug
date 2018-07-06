@@ -1,6 +1,6 @@
 mixin card-item-small(href, title, src, price)
 
-    a.card-item-small.d-block.box-shadow(href=href)
+    a.card-item-small.d-block.box-shadow.mx-auto(href=href)
         img(src= src)
         .card-body.d-inline-block
             h5.text-truncate= title
@@ -13,12 +13,12 @@ section.Products-small
         .row
             span.sprite.sprite-eye
             h4 Recently viewed products
-        .row
-            .col-3
+        .row.justify-content-center
+            .col-xl-3.col-lg-4.col-md-6.col-sm-6.col-12
                 +card-item-small('#', 'Apple iPhone 7', 'assets/img/80x60/prod_small_1.png', '$ 670')
-            .col-3
-                +card-item-small('#', 'LG 43UH610V', 'assets/img/80x60/prod_small_2.png', '$ 545')
-            .col-3
-                +card-item-small('#', 'LG G6 H870DS', 'assets/img/80x60/prod_small_3.png', '$ 545')
-            .col-3
+            .col-xl-3.col-lg-4.col-md-6.col-sm-6.col-12
+                +card-item-small('#', 'LG 46UH610V', 'assets/img/80x60/prod_small_2.png', '$ 545')
+            .col-xl-3.col-lg-4.col-md-6.col-sm-6.col-12
+                +card-item-small('#', 'LG G6 H870DS', 'assets/img/80x60/prod_small_3.png', '12 545')
+            .col-xl-3.col-lg-4.col-md-6.col-sm-6.col-12
                 +card-item-small('#', 'Asus ZenFone', 'assets/img/80x60/prod_small_4.png', '$ 545')

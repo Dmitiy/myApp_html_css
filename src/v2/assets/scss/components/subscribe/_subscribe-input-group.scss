@@ -1,18 +1,22 @@
 @import '_vars.scss';
 
 .Subscribe-input-group {
+    width: 285px;
+    display: inline-block;
     label {
         left: 20px;
     }
     input[type='email'] {
         height: 50px;
-        width: 285px;
+        width: 100%;
         padding-left: 86px;
         color: $color-b2;
         font-size: 12px;
         font-family: 'Roboto-Bold';
     }
+
     @import 'components/buttons/_btn-subscribe.scss';
+    
     .btn-subscribe {
         margin-left: -100px;
     }

@@ -50,9 +50,9 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "bootstrap-select": "^1.13.1",
     "bxslider": "^4.2.13",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9",
-    "slick-carousel": "^1.8.1"
+    "popper.js": "^1.12.9"
   }
 }

@@ -1,6 +1,6 @@
 @import '_vars.scss';
 
-.Products-small {
+.Products-small {  
     margin-bottom: 60px;
     span.sprite {
         margin-left: 32px;
@@ -31,5 +31,8 @@
                 color: $color-b2;
             }
         }
+    }
+    .col-xl-3 {
+        margin-bottom: 16px;
     }
 }

@@ -34,6 +34,7 @@ body {
     font-size: $font-size-default; // 13px
     font-family: $font-default; // Roboto
     background-color: $bg-body;
+    position: relative;
 }
 
 .page {
@@ -130,6 +131,7 @@ button {
     border: 2px solid $color-eb;
     text-align: center;
     background-color: $color-fff;
+    white-space: nowrap;
     &:hover {
         background-color: $color-fa;
         color: $color-80;

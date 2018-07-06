@@ -9,3 +9,11 @@ header {
         height: 40px;
     }
 }
+
+@import 'components/buttons/_btn-menu.scss';
+
+@media (max-width: 767px) {
+   header {
+       border-bottom: 2px solid $color-eb;
+   }
+}

@@ -46,11 +46,9 @@ $(document).ready(function () {
         $('.selectpicker').selectpicker('mobile');
     }
 
-    $('.category-select-wrapper  .selectpicker').selectpicker({
+    $('.category-select-wrapper  .selectpicker, .date-select-wrapper  .selectpicker').selectpicker({
+        container: 'body',
         style: 'border-radius',
     });
-    
-
   
-
 })(jQuery);

@@ -1,0 +1,54 @@
+@import '_vars.scss';
+
+aside {
+    width: 100%;
+    height: 100%;
+    background-color: $color-fa;
+    display: none;
+    padding: 9px 9px 0 9px;
+
+    .Search-input {
+        input {
+            background-color: $color-fa;
+            border: 2px solid $color-eb !important;
+            &:focus, &:hover {
+                background-color: $color-fff;
+            }
+        }
+    }
+    nav {
+        width: 100%;
+        &.Aside-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        a {
+            padding: 10px 0;
+            &.active,
+            &:hover {
+                background-color: $color-eb;
+            }
+            + a {
+                margin-left: 0;
+            }
+        }
+    }
+    &.aside-menu-open {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .btn-close.position-fixed {
+            top: 12px;
+            right: 12px;
+            z-index: 110;
+        }
+    }
+    
+}
+
+@import 'components/buttons/_btn-close.scss';
+
+aside.aside-menu-open ~ .page {
+    display: none;
+}

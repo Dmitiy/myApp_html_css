@@ -1,0 +1,26 @@
+@import '_vars.scss';
+
+.btn-close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $color-999;
+    font-family: 'Roboto-Medium';
+    &::before {
+        content: '\d7';
+        font-size: 36px;
+        font-family: 'Roboto-Thin';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        margin-top: -5px;
+    }
+    &:hover,
+    &:focus:active {
+        background-color: transparent;
+        color: $color-80;
+        border: 2px solid $color-80;
+        cursor: pointer;
+    }
+}

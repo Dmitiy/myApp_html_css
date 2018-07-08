@@ -5,10 +5,11 @@
     margin-bottom: 35px;
     .card {
         color: $color-80;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
         max-width: 255px;
         width: 100%;
         .card-header,
+        .card-body,
         .card-footer {
             padding-left:  12px;
             padding-right:  12px;

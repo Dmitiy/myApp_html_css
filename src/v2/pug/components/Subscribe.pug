@@ -3,11 +3,8 @@ block Subscribe
 section.Subscribe.border-top.border-bottom.d-flex.align-items-center
     .container
         .row
-            .col-xl-7.col-lg-8.col-md-12.col-sm-12.col-12.d-flex.align-items-center
+            .col-xl-7.col-lg-8.col-md-7.col-sm-12.col-12.d-flex.align-items-center
                 span.sprite.sprite-envelope-open
                 p Learn about profitable offers and get personal recommendations
-            .col-xl-5.col-lg-4.col-md-6.col-sm-7.col-9.mx-auto
-                form(name='subscribe-email', autocomplete='off').Subscribe-input-group.d-flex.align-items-center.position-relative.border-radius
-                    label(for='email').sprite.sprite-envelope.position-absolute
-                    input#email.border-radius(placeholder='Email', type='email')
-                    button.btn-subscribe.border-radius(type='submit') Subscribe
+            .col-xl-5.col-lg-4.col-md-5.col-sm-12.col-12
+                include ../elements/email-input

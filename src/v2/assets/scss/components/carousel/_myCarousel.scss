@@ -1,7 +1,7 @@
 @import '_vars.scss';
 
 .myCarousel {
-    margin: 30px auto 39px;
+    margin: 30px auto 48px;
     position: relative;
     width: 100%;
     max-width: 1080px;
@@ -31,12 +31,12 @@
     .bx-prev,
     .bx-next {
         position: absolute;
-        top: 50%;
+        top: 51%;
         transform: translateX(-50%) translateY(-50%);
         text-align: center;
         border: 2px solid rgba(255, 255, 255, .3);
         border-radius: 50%;
-        z-index: 101;
+        z-index: 110;
         background-image: url(../img/sprite_icons_retina.png);
         background-repeat: no-repeat;
         background-size: 398px 395px;

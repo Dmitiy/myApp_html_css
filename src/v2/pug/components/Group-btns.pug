@@ -1,20 +1,21 @@
 block Group-btns
 
-section
+section.filter-group-btns
     .container
         .row.align-items-center
-            .col-lg-4.col-md-6.col-sm-6.col-12
+            .col-xl-4.col-lg-4.col-md-4.col-sm-8.col-12
                 h4
                     span.sprite.sprite-star
                     | Interesting offers
-            .col-lg-4.col-md-6.col-sm-6.col-12.d-flex.align-items-center.justify-content-sm-end.justify-content-start
+            .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-12.d-flex.align-items-center.justify-content-sm-end.justify-content-center
                 include ../elements/btn-group-3
-            .col-lg-4.col-md-12.col-sm-12.col-12.d-flex.justify-content-lg-end.justify-content-md-end.justify-content-sm-end.justify-content-start
-                .category-select-wrapper 
-                    select.selectpicker.mobile
-                        option Categories
-                    span.sprite.sprite-small-angle-down.position-absolute
-                .date-select-wrapper
-                    select.selectpicker
-                        option Date
-                    span.sprite.sprite-small-angle-down.position-absolute
+            .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.d-flex.justify-content-sm-end.justify-content-center
+                .select-wrapper
+                    .category-select-wrapper 
+                        select.selectpicker.mobile
+                            option Categories
+                        span.sprite.sprite-small-angle-down.position-absolute
+                    .date-select-wrapper
+                        select.selectpicker
+                            option Date
+                        span.sprite.sprite-small-angle-down.position-absolute

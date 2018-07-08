@@ -2,6 +2,9 @@
 
 
 @media (max-width: 1199px) {
+    .container {
+        max-width: 1080px !important;
+    }
     footer {
         .text-indent__2,
         .text-indent__3 {
@@ -16,6 +19,12 @@
         }
     }
 }
+@media (min-width: 1080px){
+    .container {
+        max-width: 1080px;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .myCarousel {
@@ -40,28 +49,9 @@
             top: 8px;
         }
     }
-    .btn-filter-3{
-        margin-bottom: 20px;
-    }
     .Subscribe {
         span.sprite {
             margin-left: 12px;
-        }
-    }
-    .Subscribe-input-group {
-        margin-top: 20px;
-    }
-    footer {
-        .text-indent__2,
-        .text-indent__3 {
-            text-indent: 57px;
-        }
-
-        .Block-users,
-        .Block-shopping {
-            .col-xl-6+.col-xl-6 {
-                margin-top: 10px;
-            }
         }
     }
 }
@@ -100,6 +90,9 @@
     main {
         margin-top: 20px;
     }
+    .select-wrapper {
+        margin-top: 20px;
+    }
     .Products {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -107,10 +100,14 @@
     .Subscribe {
         margin-bottom: 20px;
     }
+    .Subscribe-input-group {
+        margin-top: 20px;
+    }
     .Products-small {
         margin-bottom: 20px;
         h4 {
             margin-bottom: 20px;
+            margin-left: 0;
         }
     }
     footer {
@@ -152,16 +149,9 @@
             }
         }
     }
+    
     .btn-filter-3 {
         margin-top: 20px;
-    }
-    .Subscribe {
-        span.sprite {
-            margin-right: 12px !important;
-        }
-        p {
-            font-size: 11px;
-        }
     }
     footer {
         .Block-users,

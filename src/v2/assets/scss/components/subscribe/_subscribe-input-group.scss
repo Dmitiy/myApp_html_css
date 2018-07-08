@@ -1,7 +1,8 @@
 @import '_vars.scss';
 
 .Subscribe-input-group {
-    width: 285px;
+    max-width: 285px;
+    width: 100%;
     display: inline-block;
     label {
         left: 20px;

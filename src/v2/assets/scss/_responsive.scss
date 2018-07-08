@@ -19,11 +19,11 @@
         }
     }
 }
-@media (min-width: 1080px){
-    .container {
-        max-width: 1080px;
-    }
-}
+// @media (min-width: 1080px){
+//     .container {
+//         max-width: 1080px;
+//     }
+// }
 
 
 @media (max-width: 1024px) {
@@ -51,7 +51,7 @@
     }
     .Subscribe {
         span.sprite {
-            margin-left: 12px;
+            margin-left: 0px;
         }
     }
 }

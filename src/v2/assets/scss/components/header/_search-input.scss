@@ -4,11 +4,12 @@
     width: 100%;
     max-width: 270px;
     height: 50px;
+    position: relative;
     label {
         top: 10px;
         left: 20px;
     }
-    input[type='text']{
+    input[type='search']{
         color: $color-b2;
         font-size: 12px;
         font-family: 'Roboto-Bold';
@@ -17,7 +18,25 @@
         line-height: 50px;
         border: 2px solid $color-f5;
         padding-left: 60px;
-        padding-right: 20px;
+        padding-right: 40px;
         text-indent: 20px;
+    }
+    .btn-close {
+        display: none;
+        position: absolute;
+        top: 6px;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        z-index: 220;
+        &:hover {
+            span {
+                background-color: $color-80;
+            }
+        }
+        span {
+            width: 12px;
+            background-color: $color-e3;
+        }
     }
 }

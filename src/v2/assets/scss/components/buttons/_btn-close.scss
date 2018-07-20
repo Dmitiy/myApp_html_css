@@ -1,26 +1,44 @@
 @import '_vars.scss';
 
 .btn-close {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid $color-999;
-    font-family: 'Roboto-Medium';
-    &::before {
-        content: '\d7';
-        font-size: 36px;
-        font-family: 'Roboto-Thin';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        margin-top: -5px;
+    width: 40px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+
+    span {
+        width: 24px;
+        height: 3px;
+        font-family: 'Roboto-Medium';
+        background-color: $color-b3;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 3px;
+        transform-origin: center;
+        transform: rotate(45deg);
+        transition: all 1s ease;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top:0;
+            width: inherit;
+            height: inherit;
+            display: inherit;
+            border-radius: inherit;
+            background-color: inherit;
+            transform: rotate(90deg);
+        }
     }
     &:hover,
-    &:focus:active {
-        background-color: transparent;
+    &:focus
+    &:active {
         color: $color-80;
-        border: 2px solid $color-80;
         cursor: pointer;
     }
 }

@@ -1,11 +1,17 @@
 @import '_vars.scss';
 
-.Menu {
-    height: 62px;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     a {
         &.active {
             font-family: 'Roboto-Bold';
         }
     }
+    &.Menu {
+        height: 62px;
+    }
 }
+
 

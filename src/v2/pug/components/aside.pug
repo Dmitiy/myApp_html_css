@@ -8,33 +8,32 @@ mixin li(href, name)
 
 block aside
 
-aside.align-items-center.justify-content-center
-    button(type='button').btn-close.position-fixed
-    .User-profile.d-flex.align-items-center.justify-content-center
+aside
+    .btn-filter-3.position-fixed
+        button.border-left-radius(type='button', data-btn-filter='Menu')
+            | Menu
+        button.active(type='button', data-btn-filter='Profile')
+            | Profile
+        button.border-right-radius(type='button', data-btn-filter='Close')
+            | Close
+    .User-profile(data-filter='Profile')
         .container-fluid
             .row.align-items-center.justify-content-center
-                .col-3.col-sm-2.text-center
+                .col-12.text-center
                     a(href='/').User-profile-img
                         img(src='assets/img/Avatar.png')
                 .col-12.col-sm-10
-                    ul.d-flex.align-items-center
+                    ul.d-flex.flex-column.align-items-center.justify-content-center
                         +li('/Favorite', 'Favorite')(class="sprite sprite-favorite")
                         +li('/Compare', 'Compare')(class="sprite sprite-compare ")
                         +li('/Cart', 'Cart')(class="sprite sprite-cart")
     .container-fluid
-        .row.align-items-center.justify-content-center
-            include ../elements/search-input
-        .row
-            nav.d-flex.flex-column.border-top.border-bottom
-                +link('/Electronics', 'Electronics')(class="text-center")
-                +link('/Appliances', 'Appliances')(class="active text-center")
-                +link('/Childrens goods', 'Childrens goods')(class="text-center")
-                +link('/Repairs', 'Repairs')(class="text-center")
-                +link('/Clothes', 'Clothes')(class="text-center")
-                +link('/Footwear', 'Footwear')(class="text-center")
-                +link('/Beauty', 'Beauty')(class="text-center")
-        .row
-            nav.Aside-footer
-                a(href='/') Mobile version
-                a(href='/') Statistics
-                a(href='/') Advertising
+        .row.d-none(data-filter='Menu')
+            nav.Menu.d-flex.flex-column
+                +link('/Electronics', 'Electronics')(class="")
+                +link('/Appliances', 'Appliances')(class="active ")
+                +link('/Childrens goods', 'Childrens goods')(class="")
+                +link('/Repairs', 'Repairs')(class="")
+                +link('/Clothes', 'Clothes')(class="")
+                +link('/Footwear', 'Footwear')(class="")
+                +link('/Beauty', 'Beauty')(class="")

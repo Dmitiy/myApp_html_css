@@ -1,5 +1,6 @@
 block search-input
 
-form(name='search-goods', autocomplete='off').Search-input.position-relative
-    label(for='search').sprite.sprite-search.position-absolute
-    input#search.border-radius(type='text', name='search', placeholder='Search goods...')
+form.Search-input(name='search-goods', autocomplete='off')
+    label.sprite.sprite-search.position-absolute(for='search')
+    input#search.border-radius(type='search', name='search', placeholder='Search goods...')
+    include ./btn-close

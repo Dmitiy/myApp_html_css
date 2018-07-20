@@ -2,10 +2,12 @@ block header
 
 .container-fluid
     .row.align-items-center
-        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4.order-md-1.order-sm-2
-            .d-none.d-sm-flex
+        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4
+            .d-none.d-sm-none.d-md-flex
                 include ../elements/search-input
-        .col-xl-4.col-lg-2.col-md-2.col-sm-2.col-4.order-md-2.order-sm-1
+            .d-sm-flex.d-md-none
+                label(for='search').sprite.sprite-search
+        .col-xl-4.col-lg-2.col-md-2.col-sm-2.col-4
             include ../elements/logo
-        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4.order-md-3.order-sm-3
+        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4
             include User-profile

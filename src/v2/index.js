@@ -33,15 +33,6 @@ $(document).ready(function () {
 
 
 (function ($) {
-
-    $('.btn-menu').on('click', () => {
-        $('aside').addClass('aside-menu-open');
-    });
-
-    $('.btn-close').on('click', () => {
-        $('aside').removeClass('aside-menu-open');
-    });
-
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.selectpicker').selectpicker('mobile');
     }
@@ -49,6 +40,55 @@ $(document).ready(function () {
     $('.category-select-wrapper  .selectpicker, .date-select-wrapper  .selectpicker').selectpicker({
         container: 'body',
         style: 'border-radius',
+    });
+
+    /* HEADER */
+        // clear search value
+        $('header .Search-input').on('click', '.btn-close', () => {
+            $('.Search-input #search').val('');
+        });
+        // show search input
+        $('header').on('click', 'label[for="search"]', () => {
+            $('.Search-Field').addClass('Search-Field__active');
+        });
+
+    /* ASIDE */
+        //   close and clear search value
+        $('.Search-Field .Search-input').on('click', '.btn-close', () => {
+            $('.Search-input #search').val('');
+            $('.Search-Field').removeClass('Search-Field__active');
+        });
+
+    $('.btn-menu').on('click', () => {
+        $('aside').addClass('aside-menu-open');
+    });
+
+    $('.btn-close', '.close-menu').on('click', () => {
+        $('aside').removeClass('aside-menu-open');
+    });
+
+
+    $('.btn-filter-3').on('click', 'button', (e) => {
+        var data = $(e.target).data('btn-filter');
+        $('[data-filter]')
+            .addClass('d-none')
+                .filter('[data-filter=' + data + ']')
+                .removeClass('d-none');
+        $('[data-btn-filter]')
+            .removeClass('active')
+                .filter('[data-btn-filter=' + data + ']')
+                .addClass('active');
+
+        if ( data === 'Close' ) {
+            $('aside').removeClass('aside-menu-open');
+            
+            $('[data-btn-filter="Close"]')
+                .removeClass('active')
+                    .prev()
+                        .addClass('active');
+
+            $('[data-filter="Profile"]').removeClass('d-none');
+        }
     });
   
 })(jQuery);

@@ -1,0 +1,31 @@
+@import '_vars.scss';
+
+.Search-Field {
+    display: none;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    padding: 10px;
+    .Search-input {
+        max-width: 100% !important;
+        .btn-close {
+            display: flex;
+        }
+    }
+    &.Search-Field__active {
+        display: flex;
+        top: 9px;
+        // animation: Search-Field__active .5s ease-out forwards;
+    }
+}
+
+// @keyframes Search-Field__active {
+//     from {
+//         top: -100%;
+//     }
+//     to {
+//         top: 9px;
+//     }
+// }

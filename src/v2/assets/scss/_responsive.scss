@@ -21,6 +21,33 @@
 }
 
 @media (max-width: 1024px) {
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            margin-top: 0;
+            &.position-fixed {
+                left: 392px;
+            }
+        }
+        nav {
+            &.Menu {
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                a {
+                    padding: 10px;
+                    width: 100%;
+                    display: block;
+                    &:hover,
+                    &.active {
+                        background-color: $color-e3;
+                    }
+                    +a {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
     .myCarousel {
         .caption {
             top: 50%;
@@ -38,9 +65,10 @@
         .Search-input {
             margin: 8px auto;
         }
-        .btn-close.position-fixed {
-            right: 16px;
-            top: 8px;
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 376px;
+            }
         }
     }
     .Subscribe {
@@ -49,9 +77,35 @@
         }
     }
 }
+//landscape iphone 8
+@media (max-width: 812px) {
+    
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 286px;
+            }
+        }
+        nav {
+            &.Menu {
+                height: 80vh;
+                a {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 768px) {
-   
+
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 264px;
+            }
+        }
+    }
     .myCarousel {
         margin: 15px auto 20px;
         .caption {
@@ -129,10 +183,39 @@
     }
     
 }
-
+//landscape iphone 6+/7+/8+
+@media (max-width: 736px) {
+    .Search-Field {
+        &.Search-Field__active {
+            top: 8px;
+        }
+    }
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 264px;
+            }
+        }
+    }
+}
+//landscape iphone 6/7/8
+@media (max-width: 667px) {
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 213px;
+            }
+        }
+    }
+}
 @media (max-width: 576px) {
-    .Menu {
-        display: none !important;
+    .Search-Field {
+        &.Search-Field__active {
+            top: -4px;
+        }
+    }
+    header {
+        height: 64px;
     }
     .myCarousel {
         .caption {
@@ -156,8 +239,28 @@
         }
     }
 }
+//landscape iphone 5/SE
+@media (max-width: 568px) {
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 164px;
+            }
+        }
+    }
+}
+//landscape iphone 4
+@media (max-width: 480px) {
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 120px;
+            }
+        }
+    }
+}
 @media (max-width: 414px) {
-    
+
     .Subscribe-input-group {
         width: 240px;
     }
@@ -167,6 +270,13 @@
         }
         ul {
             margin-right: 0;
+        }
+    }
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 86px;
+            }
         }
     }
     .myCarousel {
@@ -190,12 +300,23 @@
     }
 }
 
-@media (max-width: 320px) {
-
+@media (max-width: 375px) {
     aside.aside-menu-open {
-        .btn-close.position-fixed {
-            right: 20px;
-            top: 4px;
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 67px;
+            }
         }
+    }
+}
+
+@media (max-width: 320px) {
+    aside.aside-menu-open {
+        .btn-filter-3 {
+            &.position-fixed {
+                left: 40px;
+            }
+        }
+       
     }
 }

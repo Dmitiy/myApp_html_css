@@ -16,35 +16,26 @@ aside {
             }
         }
     }
-    nav {
-        width: 100%;
-        &.Aside-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-        a {
-            padding: 10px 0;
-            &.active,
-            &:hover {
-                background-color: $color-eb;
-            }
-            + a {
-                margin-left: 0;
-            }
-        }
-    }
+   
     &.aside-menu-open {
         display: flex;
         flex-direction: column;
         position: relative;
-        .btn-close.position-fixed {
-            top: 12px;
-            right: 12px;
-            z-index: 110;
+        // .btn-close {
+        //     &.position-fixed {
+        //         top: 12px;
+        //         right: 12px;
+        //         z-index: 110;
+        //     }
+        // }
+        .btn-filter-3 {
+            &.position-fixed {
+                bottom: 10px;
+                left: 0;
+            }
         }
     }
-    
+
 }
 
 @import 'components/buttons/_btn-close.scss';

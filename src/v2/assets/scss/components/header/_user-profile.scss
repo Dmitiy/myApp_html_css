@@ -1,6 +1,9 @@
 @import '_vars.scss';
 
 .User-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     ul {
         margin-right: 30px;
         li {

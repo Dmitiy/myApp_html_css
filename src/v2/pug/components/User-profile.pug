@@ -9,8 +9,8 @@ block User-profile
     .d-md-flex.d-lg-none
         include ../elements/btn-menu
     ul.d-flex.align-items-center.d-none.d-sm-none.d-md-none.d-lg-flex
-        +li('/Favorite', 'Favorite')(class="sprite sprite-favorite")
-        +li('/Compare', 'Compare')(class="sprite sprite-compare ")
-        +li('/Cart', 'Cart')(class="sprite sprite-cart")
-    a(href='/').User-profile-img.d-none.d-sm-none.d-md-none.d-lg-flex
+        +li('#', 'Favorite')(class="sprite sprite-favorite")
+        +li('#', 'Compare')(class="sprite sprite-compare ")
+        +li('#', 'Cart')(class="sprite sprite-cart")
+    a(href='#').User-profile-img.d-none.d-sm-none.d-md-none.d-lg-flex
         img(src='assets/img/Avatar.png')

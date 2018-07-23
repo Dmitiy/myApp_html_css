@@ -13,19 +13,15 @@
         .btn-close {
             display: flex;
         }
+        input[type='search'] {
+            &:focus {
+                font-size: 16px !important;
+               
+            }
+        }
     }
     &.Search-Field__active {
         display: flex;
         top: 9px;
-        // animation: Search-Field__active .5s ease-out forwards;
-    }
+    }  
 }
-
-// @keyframes Search-Field__active {
-//     from {
-//         top: -100%;
-//     }
-//     to {
-//         top: 9px;
-//     }
-// }

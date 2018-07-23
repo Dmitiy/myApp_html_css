@@ -11,9 +11,14 @@
         height: 50px;
         width: 100%;
         padding-left: 86px;
+        padding-right: 108px;
         color: $color-b2;
         font-size: 12px;
         font-family: 'Roboto-Bold';
+        &:focus{
+            padding-left: 56px;
+            font-size: 16px;
+        }
     }
 
     @import 'components/buttons/_btn-subscribe.scss';

@@ -52,6 +52,7 @@
     "bootstrap": "^4.0.0",
     "bootstrap-select": "^1.13.1",
     "bxslider": "^4.2.13",
+    "is_js": "^0.9.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9"
   }

@@ -1,27 +1,35 @@
 @import '_vars.scss';
 
-.Search-Field {
-    display: none;
+.Search-field {
+    display: flex;
+    width: 96%;
     position: absolute;
     top: -100%;
-    left: 0;
-    width: 100%;
-    z-index: 200;
-    padding: 10px;
+    transition: top .4s linear;
+    z-index: 300;
     .Search-input {
-        max-width: 100% !important;
+        max-width: 100%;
         .btn-close {
             display: flex;
         }
         input[type='search'] {
             &:focus {
-                font-size: 16px !important;
-               
+                font-size: 16px;
             }
         }
     }
-    &.Search-Field__active {
-        display: flex;
-        top: 9px;
-    }  
+    &.search__is-active {
+        top: 0;
+        transition: top .4s linear;
+        .Search-input {
+            input[type='search'] {
+                border: 2px solid $color-e3;
+                color: $color-999;
+                &:hover,
+                &:focus {
+                    background-color: $color-fff;
+                }
+            }
+        }
+    }
 }

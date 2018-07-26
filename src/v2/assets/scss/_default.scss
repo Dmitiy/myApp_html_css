@@ -58,17 +58,18 @@ h2 {
     line-height: 30px;
     color: $color-fff;
 }
+
 h4 {
     font-size: 18px;
     line-height: 30px;
 }
-h4, h5 {
+h3, h4, h5 {
     font-family: 'Roboto-Medium';
 }
-h4, h5, h6 {
+h3, h4, h5, h6 {
     color: $color-80;
 }
-h5, h6 {
+h3, h5, h6 {
     font-size: 14px;
     line-height: 25px;
 }
@@ -78,11 +79,13 @@ input,
 button {
     &:focus,
     &:hover {
-        transition: all linear .2s;
+        transition: all .2s linear;
     }
 }
 
 input {
+    -webkit-appearance: none;
+    appearance: none;
     &:focus {
         background-color: $color-fa;
         border: 2px solid $color-eb;
@@ -135,6 +138,7 @@ button {
     &:hover {
         background-color: $color-fa;
         color: $color-80;
+        cursor: pointer;
     }
 }
 

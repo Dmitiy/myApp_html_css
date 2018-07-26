@@ -1,19 +1,45 @@
 @import '_vars.scss';
+@import 'components/buttons/_btn-menu.scss';
+
+// @supports (position: sticky) {
+//     header {
+//         position: sticky;
+//         top: -1px;
+//         right: 0;
+//         left: 0;
+//         z-index: 300;
+//     }
+// }
 
 header {
     height: 88px;
     padding: 0 9px;
+    border-bottom: 2px solid $color-eb;
+    &.position-fixed {
+        position: fixed;
+        width: 100%;
+        top: -1px;
+        right: 0;
+        left: 0;
+        z-index: 200;
+        background-color: $color-fa;
+        .Search-input {
+            input[type='search'] {
+                background-color: $color-fa;
+                &:focus {
+                    color: $color-80;
+                    background-color: $color-fff;
+                }
+            }
+            .btn-menu {
+                z-index: 310;
+            }
+        }
+    }
+   
     .Logo img,
     .User-profile-img img {
         width: 40px;
         height: 40px;
     }
-}
-
-@import 'components/buttons/_btn-menu.scss';
-
-@media (max-width: 767px) {
-   header {
-       border-bottom: 2px solid $color-eb;
-   }
 }

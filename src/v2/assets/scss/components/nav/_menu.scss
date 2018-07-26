@@ -4,13 +4,32 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    &.Menu {
+        height: 62px;
+    }
     a {
+        position: relative;
         &.active {
             font-family: 'Roboto-Bold';
         }
-    }
-    &.Menu {
-        height: 62px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: $color-eb;
+            transition: all 0.5s linear;
+            // transform: skewX(45deg);
+            z-index: -1;
+        }
+        &:hover {
+            transition: all 0.5s linear;
+            &::after {
+                width: 100%;
+            }
+        }
     }
 }
 

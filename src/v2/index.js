@@ -1,4 +1,4 @@
-import 'jquery';
+import is from 'is_js';
 import 'bxslider/dist/jquery.bxslider.min.js';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -33,6 +33,8 @@ $(document).ready(function () {
 
 
 (function ($) {
+    
+
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.selectpicker').selectpicker('mobile');
     }
@@ -43,51 +45,87 @@ $(document).ready(function () {
     });
 
     /* HEADER */
-        // clear search value
-        $('header .Search-input').on('click', '.btn-close', () => {
-            $('.Search-input #search').val('');
-        });
-        // show search input
-        $('header').on('click', 'label[for="search"]', () => {
-            $('.Search-Field').addClass('Search-Field__active');
-        });
+    // sticky-header
+    var header = $('header');
+    var sticky = header.outerHeight();
+    $(window).on('scroll', () => {
+        if (is.ie()) {
+            stickyHeader();
+        } else {
+            stickyHeader();
+        }
+    });
+   
+    function stickyHeader() {
+        if (window.pageYOffset > sticky) {
+            header.addClass('position-fixed');
+        } else {
+            header.removeClass('position-fixed');
+        }
+    }
+    
+    // clear search value
+    $('header .Search-input').on('click', '.btn-close', () => {
+        $('.Search-input #search').val('');
+    });
+    // show search input
+    $('header').on('click', 'label[for="search"]', () => {
+        $('.Search-field').addClass('search__is-active');
+    });
 
     /* ASIDE */
-        //   close and clear search value
-        $('.Search-Field .Search-input').on('click', '.btn-close', () => {
-            $('.Search-input #search').val('');
-            $('.Search-Field').removeClass('Search-Field__active');
-        });
-
-    $('.btn-menu').on('click', () => {
-        $('aside').addClass('aside-menu-open');
+    //   close and clear search value
+    $('.Search-input').on('click', '.btn-close', () => {
+        $('#search').val('');
+        $('.Search-field').removeClass('search__is-active');
     });
 
-    $('.btn-close', '.close-menu').on('click', () => {
-        $('aside').removeClass('aside-menu-open');
-    });
+    var showMenu = true;
 
+    function toggleMenu() {
+        if (!showMenu) {
+            $('body').css({
+                'overflow': 'hidden'
+            });
+            $('.btn-menu').addClass('btn-menu-isOpen');
+            $('aside').addClass('aside-menu-open');
+            
+            showMenu = true;
+        } else {
+            $('body').css({
+                'overflow': 'auto'
+            });
+            $('.btn-menu').removeClass('btn-menu-isOpen');
+            $('aside').removeClass('aside-menu-open');
+            
+            showMenu = false;
+        }
+
+    }
+    $('.btn-menu').on('click', toggleMenu);
 
     $('.btn-filter-3').on('click', 'button', (e) => {
+
         var data = $(e.target).data('btn-filter');
+
         $('[data-filter]')
             .addClass('d-none')
-                .filter('[data-filter=' + data + ']')
-                .removeClass('d-none');
+                    .filter('[data-filter=' + data + ']')
+                        .removeClass('d-none')
+
         $('[data-btn-filter]')
             .removeClass('active')
                 .filter('[data-btn-filter=' + data + ']')
-                .addClass('active');
+                    .addClass('active')
 
         if ( data === 'Close' ) {
-            $('aside').removeClass('aside-menu-open');
-            
+            toggleMenu();
             $('[data-btn-filter="Close"]')
                 .removeClass('active')
                     .prev()
                         .addClass('active');
 
-            $('[data-filter="Profile"]').removeClass('d-none');
+            $('[data-filter="Menu"]').removeClass('d-none');
         }
     });
   

@@ -4,12 +4,10 @@
     border: none;
     width: 40px;
     height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: transparent;
     border: none;
     padding: 0;
+    z-index: 300;
     &:hover {
         background-color: transparent;
     }
@@ -20,7 +18,8 @@
         height: 3px;
         background-color: $color-999;
         border-radius: 3px;
-        &::after, &::before {
+        &::after,
+        &::before {
             content: '';
             position: absolute;
             height: inherit;
@@ -34,6 +33,24 @@
         }
         &::before {
             bottom: 8px;
+            
+        }
+    }
+    &.btn-menu-isOpen {
+        transform: rotate(-180deg);
+        position: fixed;
+        top: 26px;
+        right: 23px;
+        z-index: 320;
+        span {
+            transform: rotate(-45deg) translate(3px, -4px);
+            width: 24px;
+            &::before {
+               opacity: 0;
+            }
+            &::after {
+                transform: rotate(-90deg) translate(8px, 0px);
+            }
         }
     }
 }

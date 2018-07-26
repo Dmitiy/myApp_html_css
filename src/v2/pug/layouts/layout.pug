@@ -6,12 +6,12 @@ html(lang="en")
         include ../includes/meta
         title #{title}
     body
-        .Search-Field
-            include ../elements/search-input
         include ../components/aside
         .page
             header.d-flex.align-items-center
                 include ../components/header
+                .Search-field
+                    include ../elements/search-input
             include ../components/Menu
             include ../components/myCarousel
             main.border-bottom

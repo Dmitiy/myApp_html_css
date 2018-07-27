@@ -7,6 +7,7 @@
     height: 50px;
     position: relative;
     label {
+        position: absolute;
         top: 10px;
         left: 20px;
     }
@@ -31,10 +32,9 @@
         position: absolute;
         top: 6px;
         right: 4px;
-        background-color: transparent;
-        border: none;
-        z-index: 220;
+        z-index: 2;
         &:hover {
+            background-color: transparent;
             span {
                 background-color: $color-80;
             }

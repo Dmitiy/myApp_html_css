@@ -18,10 +18,10 @@ header {
     &.position-fixed {
         position: fixed;
         width: 100%;
-        top: -1px;
+        top: 0;
         right: 0;
         left: 0;
-        z-index: 200;
+        z-index: 6;
         background-color: $color-fa;
         .Search-input {
             input[type='search'] {
@@ -32,14 +32,14 @@ header {
                 }
             }
             .btn-menu {
-                z-index: 310;
+                z-index: 7;
             }
         }
     }
-   
     .Logo img,
     .User-profile-img img {
         width: 40px;
         height: 40px;
     }
+    
 }

@@ -1,13 +1,15 @@
 @import '_vars.scss';
 
 .btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     width: 40px;
     height: 32px;
     background-color: transparent;
-    border: none;
     padding: 0;
-    z-index: 300;
+    z-index: 10;
     &:hover {
         background-color: transparent;
     }
@@ -41,7 +43,7 @@
         position: fixed;
         top: 26px;
         right: 23px;
-        z-index: 320;
+        z-index: 12;
         span {
             transform: rotate(-45deg) translate(3px, -4px);
             width: 24px;

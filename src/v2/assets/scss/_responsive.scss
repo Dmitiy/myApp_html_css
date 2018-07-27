@@ -22,33 +22,9 @@
 
 @media (max-width: 1024px) {
    
-    .aside-menu-open {
-        nav {
-            &.Menu {
-                margin: auto;
-                display: flex;
-                height: 100%;
-                width: 100%;
-                a {
-                    padding: 10px 0;
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                    + a {
-                        margin-left: 0;
-                    }
-                    &.active {
-                        background-color: $color-eb;
-                    }
-                }
-            }
-        }
-        .User-profile {
-            margin: auto;
-            padding: 0;
-        }
-        .btn-filter-3 {
-            margin-bottom: 10px;
+    .Search-field {
+        &.search__is-active {
+            left: 0;
         }
     }
     .myCarousel {
@@ -68,25 +44,6 @@
         .Search-input {
             top: -100% !important;
             transition: top .4s ease-out;
-
-        }
-        .search__is-active {
-            .Search-input {
-                top: 18px !important;
-                left: 10px;
-                transition: top .4s ease-in;
-                input[type='search'] {
-                    background-color: $color-fa;
-                    border: 2px solid $color-eb !important;
-                    &:focus,
-                    &:hover {
-                        background-color: $color-fff;
-                    }
-                }
-                .btn-close {
-                    display: flex;
-                }
-            }
         }
     }
     .Subscribe {
@@ -212,7 +169,7 @@
 }
 //landscape iphone 6+/7+/8+
 @media (max-width: 736px) {
-    .aside-menu-open {
+    aside.aside-menu-open {
         nav.Menu {
             a {
                 padding: 2px 0;
@@ -236,8 +193,6 @@
             }
         }
     }
-    
-    
     footer {
         .Block-users,
         .Block-shopping {
@@ -259,8 +214,14 @@
 }
 //landscape iphone 4
 @media (max-width: 480px) {
-    .aside-menu-open {
-      
+    header {
+        .search__is-active {
+            .Search-input {
+                left: 2px;
+            }
+        }
+    }
+    aside.aside-menu-open {
         .User-profile {
             .User-profile-img {
                 img {
@@ -268,15 +229,8 @@
                 }
             }
         }
-        
-        nav {
-            &.Menu {
-                a {
-                    padding: 4px;
-                }
-            }
-        }
     }
+    
 }
 
 @media (max-width: 414px) {
@@ -307,13 +261,6 @@
 @media (max-width: 375px) {}
 
 @media (max-width: 320px) {
-    header {
-        .search__is-active {
-            .Search-input {
-                left: 2px;
-            }
-        }
-    }    
     .aside-menu-open {
         .User-profile {
             .User-profile-img {

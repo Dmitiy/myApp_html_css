@@ -1,9 +1,15 @@
 @import '_vars.scss';
 
-
+@media (min-width: 1600px) {
+    .Search-field {
+        &.search__is-active {
+            left: 20px;
+        }
+    }
+}
 @media (max-width: 1199px) {
     .container {
-        max-width: 1080px !important;
+        max-width: 1080px !important;   
     }
     footer {
         .text-indent__2,

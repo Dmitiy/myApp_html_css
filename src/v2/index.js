@@ -57,10 +57,12 @@ $(document).ready(function () {
     });
    
     function stickyHeader() {
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > 0) {
             header.addClass('position-fixed');
+            $('.helper-sticky-header').show();
         } else {
             header.removeClass('position-fixed');
+            $('.helper-sticky-header').hide();
         }
     }
     

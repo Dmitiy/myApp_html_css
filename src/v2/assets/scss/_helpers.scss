@@ -1,7 +1,12 @@
 @import '_vars.scss';
 
 /* helper classes */
+// sticky-header
 
+.helper-sticky-header {
+    display: none;
+    height: 88px;
+}
 //wrapper
 .wrapper {
     width: 100%;

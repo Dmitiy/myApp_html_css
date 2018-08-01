@@ -1,9 +1,9 @@
 import is from 'is_js';
 import 'bxslider/dist/jquery.bxslider.min.js';
 
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
+// import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap-reboot.min.css';
 
 
@@ -28,12 +28,10 @@ $(document).ready(function () {
         stopAutoOnClick: true,
         // slideWidth: 1080
     });
-
 });
 
 
 (function ($) {
-    
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.selectpicker').selectpicker('mobile');
@@ -45,44 +43,51 @@ $(document).ready(function () {
     });
 
     /* HEADER */
+
     // sticky-header
-    var header = $('header');
-    var sticky = header.outerHeight();
-    $(window).on('scroll', () => {
-        if (is.ie()) {
-            stickyHeader();
-        } else {
-            stickyHeader();
-        }
-    });
-   
-    function stickyHeader() {
-        if (window.pageYOffset > 0) {
-            header.addClass('position-fixed');
-            $('.helper-sticky-header').show();
-        } else {
-            header.removeClass('position-fixed');
-            $('.helper-sticky-header').hide();
-        }
-    }
     
-    // clear search value
-    $('header .Search-input').on('click', '.btn-close', () => {
-        $('.Search-input #search').val('');
-    });
+    const header = $('header');
+    const nav = $('.page .Menu');
+    // const sticky = header.outerHeight();
+
+    // $(window).on('scroll', () => {
+    //     if (is.ie()) {
+    //         stickyHeader();
+    //     } else {
+    //         stickyHeader();
+    //     }
+    // });
+   
+    // function stickyHeader() {
+    //     if (window.pageYOffset > 150) {
+    //         header.addClass('position-fixed');
+    //         nav.addClass('position-fixed');
+    //         $('.helper-sticky-header').show();
+    //     } else {
+    //         header.removeClass('position-fixed');
+    //         nav.removeClass('position-fixed');
+    //         $('.helper-sticky-header').hide();
+    //     }
+    // }
+    
     // show search input
-    $('header').on('click', 'label[for="search"]', () => {
-        $('.Search-field').addClass('search__is-active');
+
+    $('.header').on('click', 'label[for="search"]', () => {
+        $('.Search-field').addClass('is-active');
+    });
+
+    //close and clear search value
+
+    $('.Search-field').on('click', '.btn-close', () => {
+        $('.Form-search-input .Search-input #search').val('');
+        $('.Search-field #search').val('');
+        $('.Search-field').removeClass('is-active');
     });
 
     /* ASIDE */
-    //   close and clear search value
-    $('.Search-input').on('click', '.btn-close', () => {
-        $('#search').val('');
-        $('.Search-field').removeClass('search__is-active');
-    });
-
-    var showMenu = true;
+  
+    let showMenu = true;
+    $(".btn-menu").on("click", toggleMenu);
 
     function toggleMenu() {
         if (!showMenu) {
@@ -101,19 +106,18 @@ $(document).ready(function () {
             $('aside').removeClass('aside-menu-open');
             
             showMenu = false;
-        }
-
+        }    
     }
-    $('.btn-menu').on('click', toggleMenu);
+    
 
-    $('.btn-filter-3').on('click', 'button', (e) => {
+    $('aside .btn-filter-3').on('click', 'button', (e) => {
 
-        var data = $(e.target).data('btn-filter');
+        const data = $(e.target).data('btn-filter');
 
         $('[data-filter]')
-            .addClass('d-none')
-                    .filter('[data-filter=' + data + ']')
-                        .removeClass('d-none')
+            .hide()
+                .filter('[data-filter=' + data + ']')
+                    .show();
 
         $('[data-btn-filter]')
             .removeClass('active')
@@ -127,7 +131,7 @@ $(document).ready(function () {
                     .prev()
                         .addClass('active');
 
-            $('[data-filter="Menu"]').removeClass('d-none');
+            $('[data-filter="Menu"]').show();
         }
     });
   

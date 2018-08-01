@@ -1,0 +1,98 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_1.png",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 2,
+            "href": "#",
+            "title": "Bestseller",
+            "src": "assets/img/255x120/shop_img_2.png",
+            "name": "Xiaomi Mi Band 2",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 3,
+            "href": "#",
+            "title": "Goods of the week",
+            "src": "assets/img/255x120/shop_img_3.png",
+            "name": "LG 43UH610V",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 4,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_4.png",
+            "name": "Apple iMac 27 Retina 5K",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 5,
+            "href": "#",
+            "title": "New product",
+            "src": "assets/img/255x120/shop_img_5.png",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 6,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_6.png",
+            "name": "Electrolux EZB 52410 AK",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 7,
+            "href": "#",
+            "title": "Bestseller",
+            "src": "assets/img/255x120/shop_img_7.png",
+            "name": "Beats studio wireless",
+            "price": "$ 384.4"
+        },
+        {
+            "id": 8,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_8.png",
+            "name": "Nikon D3300 Kit",
+            "price": "$ 384.4"
+        }
+    ],
+    "products-small": [
+        {
+            "id": 1,
+            "href": "#",
+            "title": "Apple iPhone 7",
+            "src": "assets/img/80x60/prod_small_1.png",
+            "price": "$ 670"
+        },
+        {
+            "id": 2,
+            "href": "#",
+            "title": "LG 46UH610V",
+            "src": "assets/img/80x60/prod_small_2.png",
+            "price": "$ 545"
+        },
+        {
+            "id": 3,
+            "href": "#",
+            "title": "LG G6 H870DS",
+            "src": "assets/img/80x60/prod_small_3.png",
+            "price": "$ 545"
+        },
+        {
+            "id": 4,
+            "href": "#",
+            "title": "Asus ZenFone",
+            "src": "assets/img/80x60/prod_small_4.png",
+            "price": "$ 545"
+        }
+    ]
+}

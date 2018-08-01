@@ -5,6 +5,8 @@
     position: relative;
     width: 100%;
     max-width: 1080px;
+    display: flex;
+    justify-content: center;
     .caption {
         position: absolute;
         top: 172px;
@@ -36,7 +38,7 @@
         text-align: center;
         border: 2px solid rgba(255, 255, 255, .3);
         border-radius: 50%;
-        z-index: 3;
+        z-index: 1;
         background-image: url(../img/sprite_icons_retina.png);
         background-repeat: no-repeat;
         background-size: 398px 395px;

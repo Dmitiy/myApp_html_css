@@ -1,11 +1,9 @@
 block Subscribe
 
-section.Subscribe.border-top.border-bottom.d-flex.align-items-center
-    .container
-        .row
-            .col-xl-7.col-lg-8.col-md-7.col-sm-12.col-12.d-flex.align-items-center
-                p
-                    span.sprite.sprite-envelope-open
-                    | Learn about profitable offers and get personal recommendations
-            .col-xl-5.col-lg-4.col-md-5.col-sm-12.col-12
-                include ../elements/email-input
+section.Subscribe.border-top.border-bottom
+    .wrapper
+        p
+            span.sprite.sprite-envelope-open
+            | Learn about profitable offers and get personal recommendations
+        .Subscribe-form-input
+            include Subscribe-input

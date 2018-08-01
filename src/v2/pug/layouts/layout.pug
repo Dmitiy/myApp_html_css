@@ -6,16 +6,14 @@ html(lang="en")
         include ../includes/meta
         title #{title}
     body
-        include ../components/aside
+        .Search-field
+            include ../components/Search-input
+        include ../components/Aside
         .page
-            header.d-flex.align-items-center
+            header
                 include ../components/header
-                .Search-field
-                    include ../elements/search-input
-            .helper-sticky-header
-            include ../components/Menu
-            include ../components/myCarousel
+                include ../components/Menu
             main.border-bottom
                 block content
             footer
-                include ../components/footer
+                include ../components/Footer

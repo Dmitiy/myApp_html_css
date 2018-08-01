@@ -1,46 +1,59 @@
 @import '_vars.scss';
 @import 'components/buttons/_btn-menu.scss';
 
-// @supports (position: sticky) {
-//     header {
-//         position: sticky;
-//         top: -1px;
-//         right: 0;
-//         left: 0;
-//         z-index: 8;
-//     }
-// }
-
 header {
-    height: 88px;
-    padding: 0 9px;
-    border-bottom: 2px solid $color-eb;
-    &.position-fixed {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 6;
-        background-color: $color-fa;
-        transition: position .1s linear;
-        .Search-input {
-            input[type='search'] {
-                background-color: $color-fa;
-                &:focus {
-                    color: $color-80;
-                    background-color: $color-fff;
+    position: relative;
+    ul {
+        &.header {
+            padding: 20px 24px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                &.Search-icon,
+                &.Menu-icon {
+                    display: none;
+                }
+                &.Search-icon {
+                    flex-basis: 30px;
+                }
+                &.Form-search-input {
+                    // flex-grow: 1;
+                    // flex-shrink: 1;
+                    flex-basis: 270px;
+                }
+                &.Logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // flex-grow: 1;
+                    // flex-shrink: 1;
+                    flex-basis: 40px;
+                }
+                &.Profile {
+                    // flex-grow: 1;
+                    // flex-shrink: 1;
+                    flex-basis: 360px;
+                }
+                &.Menu-icon {
+                    justify-content: flex-end;
+                    // flex-grow: 1;
+                    // flex-shrink: 1;
+                    flex-basis: 40px;
                 }
             }
-            .btn-menu {
-                z-index: 7;
+            &.position-fixed {
+                
             }
         }
     }
-    .Logo img,
-    .User-profile-img img {
+}
+.Logo-img,
+.User-profile-img {
+    display: block;
+    img {
         width: 40px;
         height: 40px;
+        border-radius: 50%;
     }
-    
 }

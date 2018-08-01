@@ -1,13 +1,13 @@
-block header
+block Header
 
-.container-fluid
-    .row.align-items-center
-        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4
-            .d-none.d-sm-none.d-md-flex
-                include ../elements/search-input
-            .d-sm-flex.d-md-none
-                label(for='search').sprite.sprite-search
-        .col-xl-4.col-lg-2.col-md-2.col-sm-2.col-4
-            include ../elements/logo
-        .col-xl-4.col-lg-5.col-md-5.col-sm-5.col-4
-            include User-profile
+ul.header
+    li.Search-icon
+        label.sprite.sprite-search(for='search')
+    li.Form-search-input
+        include Search-input
+    li.Logo
+        include ../elements/Logo
+    li.Profile
+        include User-Profile
+    li.Menu-icon
+        include ../elements/btn-menu

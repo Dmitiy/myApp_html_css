@@ -1,5 +1,6 @@
-@import 'components/aside/_aside.scss';
 @import 'components/_search-field.scss';
+
+@import 'components/aside/_aside.scss';
 
 @import 'components/header/_header.scss';
 @import 'components/header/_search-input.scss';
@@ -13,11 +14,12 @@
 
 @import 'components/buttons/_btn-filter-3.scss';
 @import 'components/group-btns/_category-select.scss';
+@import 'components/group-btns/_filter-group-btns.scss';
 
 @import 'components/product-item/_products.scss';
 
 @import 'components/subscribe/_subscribe.scss';
-@import 'components/subscribe/_subscribe-input-group.scss';
+@import 'components/subscribe/_subscribe-input.scss';
 
 @import 'components/product-item/_products-small.scss';
 

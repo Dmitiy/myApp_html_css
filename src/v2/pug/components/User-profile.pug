@@ -1,16 +1,14 @@
 mixin li(href, name)
-    li.d-flex.align-items-center
+    li
         span(class != attributes.class)
         a(href=href)= name
 
 block User-profile
 
-.User-profile.d-flex.align-items-center.justify-content-end
-    .d-md-flex.d-lg-none
-        include ../elements/btn-menu
-    ul.d-flex.align-items-center.d-none.d-sm-none.d-md-none.d-lg-flex
-        +li('#', 'Favorite')(class="sprite sprite-favorite")
-        +li('#', 'Compare')(class="sprite sprite-compare ")
-        +li('#', 'Cart')(class="sprite sprite-cart")
-    a(href='#').User-profile-img.d-none.d-sm-none.d-md-none.d-lg-flex
-        img(src='assets/img/user/avatar.png')
+ul.User-profile
+    +li('#', 'Favorite')(class="sprite sprite-favorite")
+    +li('#', 'Compare')(class="sprite sprite-compare ")
+    +li('#', 'Cart')(class="sprite sprite-cart")
+    li.User-profile-img
+        a(href='#')
+            img(src='assets/img/user/avatar.png')

@@ -1,11 +1,14 @@
 @import '_vars.scss';
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     &.Menu {
         height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.position-fixed {
+         
+        }
     }
     a {
         position: relative;
@@ -21,7 +24,6 @@ nav {
             width: 0;
             background: $color-eb;
             transition: all 0.5s linear;
-            // transform: skewX(45deg);
             z-index: -1;
         }
         &:hover {

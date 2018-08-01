@@ -2,27 +2,21 @@ mixin link(href, name)
     a(href=href)&attributes(attributes)= name
 
 mixin li(href, name)
-    li.d-flex.align-items-center
+    li
         span(class != attributes.class)
         a(href=href)= name
 
 block aside
 
-aside.d-flex.align-items-center.justify-content-center
-    //- h3 Profile
-    .User-profile.d-none(data-filter='Profile')
-        .container-fluid
-            .row.align-items-center.justify-content-start
-                .col-3.text-center
-                    a(href='/').User-profile-img
-                        img(src='assets/img/user/avatar-125.png')
-                .col-7.col-sm-7
-                    ul.d-flex.flex-column.align-items-start.justify-content-start
-                        +li('#', 'Favorite')(class="sprite sprite-favorite")
-                        +li('#', 'Compare')(class="sprite sprite-compare ")
-                        +li('#', 'Cart')(class="sprite sprite-cart")
-    //- h3 Menu
-    nav.Menu.flex-column.align-items-center.justify-content-center(data-filter='Menu')
+aside
+    .User-profile(data-filter='Profile')
+        a.User-profile-img(href='/')
+            img(src='assets/img/user/avatar.png')
+        ul
+            +li('#', 'Favorite')(class="sprite sprite-favorite")
+            +li('#', 'Compare')(class="sprite sprite-compare ")
+            +li('#', 'Cart')(class="sprite sprite-cart")
+    nav.Menu(data-filter='Menu')
         +link('#', 'Electronics')(class="")
         +link('#', 'Appliances')(class="active ")
         +link('#', 'Childrens goods')(class="")

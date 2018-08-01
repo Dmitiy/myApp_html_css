@@ -5,7 +5,7 @@
 
 .helper-sticky-header {
     display: none;
-    height: 88px;
+    height: 150px;
 }
 //wrapper
 .wrapper {
@@ -42,7 +42,11 @@
     border-bottom-right-radius: 50px;
 }
 .border-radius {
-    border-radius: 50px !important;
+    border-radius: 50px;
+}
+
+.border-radius-circle {
+    border-radius: 50%;
 }
 
 //position

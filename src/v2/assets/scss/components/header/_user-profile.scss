@@ -1,42 +1,28 @@
 @import '_vars.scss';
 
-.User-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ul {
-        margin-right: 30px;
+ul {
+    &.User-profile{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         li {
+            display: flex;
+            align-items: center;
             &:nth-child(2) {
                 margin-left: 23px;
                 margin-right: 22px;
+            }
+            &.User-profile-img {
+                margin-left: 30px;
+                a {
+                    img {
+                        border-radius: 50%;
+                    }
+                }
             }
             .sprite {
                 margin-right: 10px;
             }
         }
-    }
-    .User-profile-img {
-        display: inline-block;
-        vertical-align: top;    
-        img {
-            border-radius: 50%;
-        }
-    }
-}
-
-@media (max-width: 991px) {
-    .User-profile-img {
-       
-    }
-}
-
-@media (max-width: 575px) {
-    header {
-        .User-profile {
-            ul {
-                display: none !important;
-            }
-        }
-    }
+    }  
 }

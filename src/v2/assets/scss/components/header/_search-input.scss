@@ -1,17 +1,20 @@
 @import '_vars';
-@import '../buttons/_btn-close';
 
 .Search-input {
     width: 100%;
     max-width: 270px;
     height: 50px;
     position: relative;
-    label {
+    label,
+    .btn-close {
         position: absolute;
+        z-index: 2;
+    }
+    label {
         top: 10px;
         left: 20px;
     }
-    input[type='search']{
+    input[type='search'] {
         color: $color-b2;
         font-size: 12px;
         font-family: 'Roboto-Bold';
@@ -19,20 +22,20 @@
         height: 50px;
         line-height: 50px;
         border: 2px solid $color-f5;
-        padding-left: 60px;
+        padding-left: 80px;
         padding-right: 40px;
-        text-indent: 20px;
         &:focus {
             font-size: 16px !important;
-            text-indent: 0;
+            padding-left: 60px;
         }
     }
+
+    @import '../buttons/_btn-close';
+
     .btn-close {
         display: none;
-        position: absolute;
         top: 6px;
         right: 4px;
-        z-index: 2;
         &:hover {
             background-color: transparent;
             span {

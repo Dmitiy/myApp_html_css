@@ -4,54 +4,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    background-color: transparent;
     border: none;
+    padding: 0;
     width: 40px;
     height: 32px;
-    background-color: transparent;
-    padding: 0;
-    z-index: 10;
     &:hover {
         background-color: transparent;
     }
     span {
-        position: relative;
+        position: absolute;
+        content: '';
         display: inline-block;
-        width: 20px;
+        width: 24px;
         height: 3px;
         background-color: $color-999;
         border-radius: 3px;
-        &::after,
-        &::before {
-            content: '';
-            position: absolute;
-            height: inherit;
-            width: 24px;
-            background-color: inherit;
-            left: 0;
-            border-radius: inherit;
+        &:first-child {
+            top: 7px;
         }
-        &::after {
-            top: 8px;
+        &:nth-child(2) {
+            width: 20px;
+            left: 8px;
         }
-        &::before {
-            bottom: 8px;
-            
+        &:last-child {
+            bottom: 6px;
         }
     }
     &.btn-menu-isOpen {
         transform: rotate(-180deg);
+        transform-origin: center 14px;
         position: fixed;
         top: 26px;
         right: 23px;
-        z-index: 12;
+        z-index: 4;
         span {
-            transform: rotate(-45deg) translate(3px, -4px);
-            width: 24px;
-            &::before {
+            &:first-child {
+                transform: rotate(45deg) translate(3px, 4px);
+            }
+            &:nth-child(2) {
                opacity: 0;
             }
-            &::after {
-                transform: rotate(-90deg) translate(8px, 0px);
+            &:last-child {
+                transform: rotate(-45deg) translate(8px, -8px);
             }
         }
     }

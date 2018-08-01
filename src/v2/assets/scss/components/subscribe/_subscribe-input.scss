@@ -1,0 +1,30 @@
+@import '_vars.scss';
+
+.Subscribe-form-input {
+    .Subscribe-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        label {
+            left: 20px;
+        }
+        input[type='email'] {
+            height: 50px;
+            width: 100%;
+            padding-left: 86px;
+            padding-right: 108px;
+            color: $color-b2;
+            font-size: 12px;
+            font-family: 'Roboto-Bold';
+            &:focus {
+                padding-left: 56px;
+                font-size: 16px;
+            }
+        }
+        @import 'components/buttons/_btn-subscribe.scss';
+        .btn-subscribe {
+            margin-left: -100px;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import is from 'is_js';
 import 'bxslider/dist/jquery.bxslider.min.js';
 
@@ -7,10 +8,10 @@ import 'bxslider/dist/jquery.bxslider.min.js';
 import 'bootstrap/dist/css/bootstrap-reboot.min.css';
 
 
-import 'bootstrap-select/dist/css/bootstrap-select.min.css';
-import 'bootstrap-select/dist/js/bootstrap-select.min.js';
+// import 'bootstrap-select/dist/css/bootstrap-select.min.css';
+// import 'bootstrap-select/dist/js/bootstrap-select.min.js';
 
-import 'bootstrap-select/dist/js/i18n/defaults-en_US.min.js';
+// import 'bootstrap-select/dist/js/i18n/defaults-en_US.min.js';
 
 import './assets/scss/style.scss';
 
@@ -30,20 +31,18 @@ $(document).ready(function () {
     });
 });
 
-
 (function ($) {
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $('.selectpicker').selectpicker('mobile');
-    }
+    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    //     $('.selectpicker').selectpicker('mobile');
+    // }
 
-    $('.category-select-wrapper  .selectpicker, .date-select-wrapper  .selectpicker').selectpicker({
-        container: 'body',
-        style: 'border-radius',
-    });
+    // $('.category-select-wrapper  .selectpicker, .date-select-wrapper  .selectpicker').selectpicker({
+    //     container: 'body',
+    //     style: 'border-radius',
+    // });
 
     /* HEADER */
-
     // sticky-header
     
     const header = $('header');
@@ -144,8 +143,9 @@ window.onload = () => {
     let page = 1;
     let products = [];
     let flag = true;
-    
+
     const btnMore = document.querySelector('.btn-show-more');
+    const categories = document.querySelector('.category-select-wrapper select');
 
     btnMore.addEventListener('click', () => {
         if (flag) {
@@ -163,14 +163,22 @@ window.onload = () => {
                 if (!data.length) {
                     flag = false;
                 }
+
                 products = [...products, ...data];
+                
                 render(products);
                 page++;
+                console.log(products)
             })
             .catch((err) => console.log('ERROR: ', err));
     };
 
     getProductItems();
+
+    const render = (products) => {
+        const html = products.map((product) => renderItem(product)).join('');
+        document.querySelector('.Products').innerHTML = html;
+    }
 
     const renderItem = (productItem) => {
         return ` <a class="card box-shadow" href="${productItem.href}">
@@ -186,17 +194,27 @@ window.onload = () => {
             </div>
         </a>`;
     }
+    //select block of the categories
+        const findMatcheProducts = (titleToMatch, products) => {
+            return products.filter(product => {
+                const regex = new RegExp(titleToMatch, 'gi');
+                return product.title.match(regex);
+            });
+        }
 
-    const render = (products) => {
-        const html = products.map((product) => renderItem(product)).join('');
-        document.querySelector('.Products').innerHTML = html;
-    }
+        const displayMatchesProducts = (option) => {
+            const matchArr = findMatcheProducts(option, products);
+            // console.log(matchArr);
 
-    const categories = document.querySelector('.category-select-wrapper .selectpicker');
-    const categoriesOption = document.querySelector('.category-select-wrapper .selectpicker option');
+            const html = matchArr.map(product => {
+                return renderItem(product);
+            }).join('');
 
-    categories.addEventListener('change', (e) => {
-        currentOption = e.target;
-        console.log();
-    });
+            document.querySelector('.Products').innerHTML = html;
+        }
+
+        categories.addEventListener('change', (e) => {
+            let option = e.target.value;
+            displayMatchesProducts(option);
+        });
 };

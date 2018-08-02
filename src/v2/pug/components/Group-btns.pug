@@ -6,14 +6,15 @@ section.filter-group-btns
         | Interesting offers
     include ../elements/btn-group-3
     .select-wrapper
-        .category-select-wrapper 
-            select.selectpicker.mobile(onchange='selectCategories()')
-                option(value='Bestseller') Bestseller
-                option(value='Recommend') Recommend
-                option(value='New product') New product
-                option(value='Goods of the week') Goods of the week
-            span.sprite.sprite-small-angle-down.position-absolute
-        .date-select-wrapper
-            select.selectpicker
-                option Date
-            span.sprite.sprite-small-angle-down.position-absolute
+        form(action='', autocomplete='off', name='selectProducts')
+            .category-select-wrapper 
+                select(name='selectCategory')
+                    option(value='Bestseller') Bestseller
+                    option(value='Recommend') Recommend
+                    option(value='New product') New product
+                    option(value='Goods of the week') Goods of the week
+                //- span.sprite.sprite-small-angle-down.position-absolute
+            .date-select-wrapper
+                select
+                    option Date
+                //- span.sprite.sprite-small-angle-down.position-absolute

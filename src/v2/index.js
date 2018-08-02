@@ -155,7 +155,7 @@ window.onload = () => {
         }
     });
     
-    function getProductItems(){
+    const getProductItems = () => {
 
         fetch(`http://localhost:3004/products?_page=${page}&_limit=${limit}`)
             .then((res) => res.json())
@@ -168,7 +168,7 @@ window.onload = () => {
                 
                 render(products);
                 page++;
-                console.log(products)
+                // console.log(products)
             })
             .catch((err) => console.log('ERROR: ', err));
     };
@@ -216,5 +216,9 @@ window.onload = () => {
         categories.addEventListener('change', (e) => {
             let option = e.target.value;
             displayMatchesProducts(option);
+
+            if(option === 'All') {
+                displayMatchesProducts();
+            }
         });
 };

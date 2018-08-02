@@ -68,56 +68,56 @@
             "id": 9,
             "href": "#",
             "title": "Recommend",
-            "src": "assets/img/255x120/shop_img_1.png",
+            "src": "http://via.placeholder.com/255x120",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4"
         }, {
             "id": 10,
             "href": "#",
             "title": "Bestseller",
-            "src": "assets/img/255x120/shop_img_2.png",
+            "src": "http://via.placeholder.com/255x120",
             "name": "Xiaomi Mi Band 2",
             "price": "$ 384.4"
         }, {
             "id": 11,
             "href": "#",
             "title": "Goods of the week",
-            "src": "assets/img/255x120/shop_img_3.png",
+            "src": "https://placeimg.com/255/120/tech",
             "name": "LG 43UH610V",
             "price": "$ 384.4"
         }, {
             "id": 12,
             "href": "#",
             "title": "Recommend",
-            "src": "assets/img/255x120/shop_img_4.png",
+            "src": "https://placeimg.com/255/120/tech",
             "name": "Apple iMac 27 Retina 5K",
             "price": "$ 384.4"
         }, {
             "id": 13,
             "href": "#",
             "title": "New product",
-            "src": "assets/img/255x120/shop_img_5.png",
+            "src": "https://placeimg.com/255/120/any",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4"
         }, {
             "id": 14,
             "href": "#",
             "title": "Recommend",
-            "src": "assets/img/255x120/shop_img_6.png",
+            "src": "https://placeimg.com/255/120/tech",
             "name": "Electrolux EZB 52410 AK",
             "price": "$ 384.4"
         }, {
             "id": 15,
             "href": "#",
             "title": "Bestseller",
-            "src": "assets/img/255x120/shop_img_7.png",
+            "src": "https://placeimg.com/255/120/tech",
             "name": "Beats studio wireless",
             "price": "$ 384.4"
         }, {
             "id": 16,
             "href": "#",
             "title": "Recommend",
-            "src": "assets/img/255x120/shop_img_8.png",
+            "src": "https://placeimg.com/255/120/any",
             "name": "Nikon D3300 Kit",
             "price": "$ 384.4"
         }

@@ -150,6 +150,7 @@ window.onload = () => {
     btnMore.addEventListener('click', () => {
         if (flag) {
             getProductItems();
+            categories.value = 'All';
         } else {
             btnMore.style.display = 'none';
         }
@@ -162,6 +163,7 @@ window.onload = () => {
             .then((data) => {
                 if (!data.length) {
                     flag = false;
+                    btnMore.style.display = 'none';
                 }
 
                 products = [...products, ...data];

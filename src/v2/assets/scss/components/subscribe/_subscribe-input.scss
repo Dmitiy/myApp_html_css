@@ -3,9 +3,11 @@
 .Subscribe-form-input {
     .Subscribe-input {
         width: 100%;
+        max-width: 285px;
         display: flex;
         align-items: center;
         position: relative;
+        flex-basis: 285px;
         label {
             left: 20px;
         }

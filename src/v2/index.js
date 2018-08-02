@@ -136,3 +136,67 @@ $(document).ready(function () {
     });
   
 })(jQuery);
+
+
+window.onload = () => {
+
+    let limit = 4;
+    let page = 1;
+    let products = [];
+    let flag = true;
+    
+    const btnMore = document.querySelector('.btn-show-more');
+
+    btnMore.addEventListener('click', () => {
+        if (flag) {
+            getProductItems();
+        } else {
+            btnMore.style.display = 'none';
+        }
+    });
+    
+    function getProductItems(){
+
+        fetch(`http://localhost:3004/products?_page=${page}&_limit=${limit}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (!data.length) {
+                    flag = false;
+                }
+                products = [...products, ...data];
+                render(products);
+                page++;
+            })
+            .catch((err) => console.log('ERROR: ', err));
+    };
+
+    getProductItems();
+
+    const renderItem = (productItem) => {
+        return ` <a class="card box-shadow" href="${productItem.href}">
+            <div class="card-header">
+                <span>${productItem.title}</span>
+            </div>
+            <div class="card-body border-top">
+                <img src="${productItem.src}" />
+                <p class="text-truncate">${productItem.name}</p>
+            </div>
+            <div class="card-footer border-top">
+                <span class="amount">${productItem.price}</span>
+            </div>
+        </a>`;
+    }
+
+    const render = (products) => {
+        const html = products.map((product) => renderItem(product)).join('');
+        document.querySelector('.Products').innerHTML = html;
+    }
+
+    const categories = document.querySelector('.category-select-wrapper .selectpicker');
+    const categoriesOption = document.querySelector('.category-select-wrapper .selectpicker option');
+
+    categories.addEventListener('change', (e) => {
+        currentOption = e.target;
+        console.log();
+    });
+};

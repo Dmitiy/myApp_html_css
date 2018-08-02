@@ -63,6 +63,63 @@
             "src": "assets/img/255x120/shop_img_8.png",
             "name": "Nikon D3300 Kit",
             "price": "$ 384.4"
+        },
+        {
+            "id": 9,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_1.png",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4"
+        }, {
+            "id": 10,
+            "href": "#",
+            "title": "Bestseller",
+            "src": "assets/img/255x120/shop_img_2.png",
+            "name": "Xiaomi Mi Band 2",
+            "price": "$ 384.4"
+        }, {
+            "id": 11,
+            "href": "#",
+            "title": "Goods of the week",
+            "src": "assets/img/255x120/shop_img_3.png",
+            "name": "LG 43UH610V",
+            "price": "$ 384.4"
+        }, {
+            "id": 12,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_4.png",
+            "name": "Apple iMac 27 Retina 5K",
+            "price": "$ 384.4"
+        }, {
+            "id": 13,
+            "href": "#",
+            "title": "New product",
+            "src": "assets/img/255x120/shop_img_5.png",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4"
+        }, {
+            "id": 14,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_6.png",
+            "name": "Electrolux EZB 52410 AK",
+            "price": "$ 384.4"
+        }, {
+            "id": 15,
+            "href": "#",
+            "title": "Bestseller",
+            "src": "assets/img/255x120/shop_img_7.png",
+            "name": "Beats studio wireless",
+            "price": "$ 384.4"
+        }, {
+            "id": 16,
+            "href": "#",
+            "title": "Recommend",
+            "src": "assets/img/255x120/shop_img_8.png",
+            "name": "Nikon D3300 Kit",
+            "price": "$ 384.4"
         }
     ],
     "products-small": [

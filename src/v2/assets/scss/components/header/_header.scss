@@ -3,6 +3,12 @@
 
 header {
     position: relative;
+    &.position-fixed {
+        width: 100%;
+        top: 0;
+        background-color: $color-fa;
+        z-index: 8;
+    }
     ul {
         &.header {
             padding: 20px 24px 18px;
@@ -18,32 +24,21 @@ header {
                     flex-basis: 30px;
                 }
                 &.Form-search-input {
-                    // flex-grow: 1;
-                    // flex-shrink: 1;
                     flex-basis: 270px;
                 }
                 &.Logo {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    // flex-grow: 1;
-                    // flex-shrink: 1;
                     flex-basis: 40px;
                 }
                 &.Profile {
-                    // flex-grow: 1;
-                    // flex-shrink: 1;
                     flex-basis: 360px;
                 }
                 &.Menu-icon {
                     justify-content: flex-end;
-                    // flex-grow: 1;
-                    // flex-shrink: 1;
                     flex-basis: 40px;
                 }
-            }
-            &.position-fixed {
-                
             }
         }
     }

@@ -1,9 +1,19 @@
 @import '_vars.scss';
 
+.select-wrapper,
+.select-wrapper form {
+    display: flex; 
+}
 .select-wrapper {
     display: flex;
-    .category-select-wrapper + .date-select-wrapper {
+    .category-select-wrapper + .date-select-wrapper { 
         margin-left: 10px;
+    }
+    .category-select-wrapper,
+    .date-select-wrapper {
+        select {
+            padding: 4px 5px;  
+        }
     }
     .category-select-wrapper {
         .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {

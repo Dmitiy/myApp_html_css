@@ -1,5 +1,7 @@
 import $ from 'jquery';
+
 import is from 'is_js';
+
 import 'bxslider/dist/jquery.bxslider.min.js';
 
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -41,33 +43,6 @@ $(document).ready(function () {
     //     container: 'body',
     //     style: 'border-radius',
     // });
-
-    /* HEADER */
-    // sticky-header
-    
-    const header = $('header');
-    const nav = $('.page .Menu');
-    // const sticky = header.outerHeight();
-
-    // $(window).on('scroll', () => {
-    //     if (is.ie()) {
-    //         stickyHeader();
-    //     } else {
-    //         stickyHeader();
-    //     }
-    // });
-   
-    // function stickyHeader() {
-    //     if (window.pageYOffset > 150) {
-    //         header.addClass('position-fixed');
-    //         nav.addClass('position-fixed');
-    //         $('.helper-sticky-header').show();
-    //     } else {
-    //         header.removeClass('position-fixed');
-    //         nav.removeClass('position-fixed');
-    //         $('.helper-sticky-header').hide();
-    //     }
-    // }
     
     // show search input
 
@@ -121,7 +96,7 @@ $(document).ready(function () {
         $('[data-btn-filter]')
             .removeClass('active')
                 .filter('[data-btn-filter=' + data + ']')
-                    .addClass('active')
+                    .addClass('active');
 
         if ( data === 'Close' ) {
             toggleMenu();
@@ -133,94 +108,148 @@ $(document).ready(function () {
             $('[data-filter="Menu"]').show();
         }
     });
+
+    $('.btn-filter-3').on('click', 'button', (e) => {
+
+        const data = $(e.target);
+        
+        $('[data-filterName]')
+            .removeClass('active')
+                .filter(data)
+                    .addClass('active')
+    });
   
 })(jQuery);
 
 
 window.onload = () => {
 
-    let limit = 4;
-    let page = 1;
     let products = [];
     let flag = true;
+    let filter = 'trending';
+    let limit = 4;
+    let page = 1;
+    let title = '';
 
+    const pageContainer = document.querySelector('.page');
+    const header = document.querySelector('header');
+    const topOfHeader = header.offsetTop;
+    const main = document.querySelector('main');
     const btnMore = document.querySelector('.btn-show-more');
+    const btnsFilter = document.querySelector('main .btn-filter-3');
     const categories = document.querySelector('.category-select-wrapper select');
 
+    let url = () => {
+        return title === ''
+            ? `http://localhost:3004/products?_page=${page}&_limit=${limit}&filter=${filter}`
+            : `http://localhost:3004/products?_page=${page}&_limit=${limit}&filter=${filter}&title=${title}`
+    }
+
+    // show more items
     btnMore.addEventListener('click', () => {
         if (flag) {
             getProductItems();
-            categories.value = 'All';
-        } else {
-            btnMore.style.display = 'none';
         }
     });
-    
-    const getProductItems = () => {
 
-        fetch(`http://localhost:3004/products?_page=${page}&_limit=${limit}`)
+    //get request to the server
+    const getProductItems = (isFilter) => {
+
+        if(isFilter) {
+            page = 1;
+            products = [];
+        }
+
+        fetch(url())
             .then((res) => res.json())
             .then((data) => {
-                if (!data.length) {
+
+                if (data.length < limit) {
                     flag = false;
                     btnMore.style.display = 'none';
+                } else {
+                    flag = true;
+                    btnMore.style.display = 'inline-block';
                 }
 
                 products = [...products, ...data];
-                
                 render(products);
+                // console.log(products);
                 page++;
-                // console.log(products)
             })
             .catch((err) => console.log('ERROR: ', err));
     };
 
+    //init state
     getProductItems();
 
+    //
     const render = (products) => {
         const html = products.map((product) => renderItem(product)).join('');
         document.querySelector('.Products').innerHTML = html;
     }
 
     const renderItem = (productItem) => {
-        return ` <a class="card box-shadow" href="${productItem.href}">
-            <div class="card-header">
-                <span>${productItem.title}</span>
-            </div>
-            <div class="card-body border-top">
-                <img src="${productItem.src}" />
-                <p class="text-truncate">${productItem.name}</p>
-            </div>
-            <div class="card-footer border-top">
-                <span class="amount">${productItem.price}</span>
-            </div>
-        </a>`;
+        return `<a class="card box-shadow" href="${productItem.href}">
+                    <div class="card-header">
+                        <span class='text-truncate'>${productItem.title}</span>
+                    </div>
+                    <div class="card-body border-top">
+                        <img src="${productItem.src}" />
+                        <p class="text-truncate">${productItem.name}</p>
+                    </div>
+                    <div class="card-footer border-top">
+                        <span class="amount">${productItem.price}</span>
+                    </div>
+                </a>`;
     }
-    //select block of the categories
-        const findMatcheProducts = (titleToMatch, products) => {
-            return products.filter(product => {
-                const regex = new RegExp(titleToMatch, 'gi');
-                return product.title.match(regex);
-            });
+
+    // select option of categories
+    categories.addEventListener('change', (e) => {
+
+        title = e.target.value === 'All' ? '' : e.target.value;
+        getProductItems(true);
+    });
+
+
+    // btn-filter-3
+    btnsFilter.addEventListener('click', (e) => {
+
+        filter = e.target.textContent.toLowerCase();
+        getProductItems(true);
+    });
+
+
+
+    /* ADD SOME FEATURES */ 
+
+    // sticky-header
+    const helperDiv = header.offsetHeight + 'px';
+    const newDiv = document.createElement("div");
+    newDiv.style.height = helperDiv;
+
+
+    console.dir(newDiv);
+    console.dir(helperDiv);
+
+    const stickyHeader = () => {
+        
+        if ( is.mobile(window.scrollY > topOfHeader) ) {
+            pageContainer.insertBefore(newDiv, main);
+            header.classList.add('position-fixed');
+        } else if ( is.tablet(window.scrollY > topOfHeader) ) {
+            pageContainer.insertBefore(newDiv, main);
+            header.classList.add('position-fixed');
+        } else if (is.desktop(window.scrollY > topOfHeader)) {
+            pageContainer.insertBefore(newDiv, main);
+            header.classList.add('position-fixed');
+        } else {
+            pageContainer.removeChild(newDiv);
+            header.classList.remove('position-fixed');
         }
-
-        const displayMatchesProducts = (option) => {
-            const matchArr = findMatcheProducts(option, products);
-            // console.log(matchArr);
-
-            const html = matchArr.map(product => {
-                return renderItem(product);
-            }).join('');
-
-            document.querySelector('.Products').innerHTML = html;
-        }
-
-        categories.addEventListener('change', (e) => {
-            let option = e.target.value;
-            displayMatchesProducts(option);
-
-            if(option === 'All') {
-                displayMatchesProducts();
-            }
-        });
+        
+    }
+    
+    window.addEventListener('scroll', stickyHeader);
 };
+

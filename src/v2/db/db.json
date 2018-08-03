@@ -7,9 +7,7 @@
             "src": "assets/img/255x120/shop_img_1.png",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": false,
-            "trending": false
+            "filter": "new"
         },
         {
             "id": 2,
@@ -18,9 +16,7 @@
             "src": "assets/img/255x120/shop_img_2.png",
             "name": "Xiaomi Mi Band 2",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": true,
-            "trending": false
+            "filter": "new"
         },
         {
             "id": 3,
@@ -29,9 +25,7 @@
             "src": "assets/img/255x120/shop_img_3.png",
             "name": "LG 43UH610V",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": true,
-            "trending": true
+            "filter": "popular"
         },
         {
             "id": 4,
@@ -40,9 +34,7 @@
             "src": "assets/img/255x120/shop_img_4.png",
             "name": "Apple iMac 27 Retina 5K",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": false,
-            "trending": true
+            "filter": "new"
         },
         {
             "id": 5,
@@ -51,9 +43,7 @@
             "src": "assets/img/255x120/shop_img_5.png",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": true,
-            "trending": false
+            "filter": "trending"
         },
         {
             "id": 6,
@@ -62,9 +52,7 @@
             "src": "assets/img/255x120/shop_img_6.png",
             "name": "Electrolux EZB 52410 AK",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": false,
-            "trending": false
+            "filter": "trending"
         },
         {
             "id": 7,
@@ -73,9 +61,7 @@
             "src": "assets/img/255x120/shop_img_7.png",
             "name": "Beats studio wireless",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": true,
-            "trending": true
+            "filter": "popular"
         },
         {
             "id": 8,
@@ -84,9 +70,7 @@
             "src": "assets/img/255x120/shop_img_8.png",
             "name": "Nikon D3300 Kit",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": false,
-            "trending": false
+            "filter": "new"
         },
         {
             "id": 9,
@@ -95,9 +79,7 @@
             "src": "http://via.placeholder.com/255x120",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": false,
-            "trending": false
+            "filter": "popular"
         }, {
             "id": 10,
             "href": "#",
@@ -105,9 +87,7 @@
             "src": "http://via.placeholder.com/255x120",
             "name": "Xiaomi Mi Band 2",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": true,
-            "trending": true
+            "filter": "popular"
         }, {
             "id": 11,
             "href": "#",
@@ -115,9 +95,7 @@
             "src": "https://placeimg.com/255/120/tech",
             "name": "LG 43UH610V",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": false,
-            "trending": false
+            "filter": "new"
         }, {
             "id": 12,
             "href": "#",
@@ -125,9 +103,7 @@
             "src": "https://placeimg.com/255/120/tech",
             "name": "Apple iMac 27 Retina 5K",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": true,
-            "trending": true
+            "filter": "popular"
         }, {
             "id": 13,
             "href": "#",
@@ -135,9 +111,7 @@
             "src": "https://placeimg.com/255/120/any",
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": false,
-            "trending": true
+            "filter": "popular"
         }, {
             "id": 14,
             "href": "#",
@@ -145,9 +119,7 @@
             "src": "https://placeimg.com/255/120/tech",
             "name": "Electrolux EZB 52410 AK",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": true,
-            "trending": true
+            "filter": "new"
         }, {
             "id": 15,
             "href": "#",
@@ -155,9 +127,7 @@
             "src": "https://placeimg.com/255/120/tech",
             "name": "Beats studio wireless",
             "price": "$ 384.4",
-            "popular" : false,
-            "new": false,
-            "trending": false
+            "filter": "trending"
         }, {
             "id": 16,
             "href": "#",
@@ -165,9 +135,51 @@
             "src": "https://placeimg.com/255/120/any",
             "name": "Nikon D3300 Kit",
             "price": "$ 384.4",
-            "popular" : true,
-            "new": false,
-            "trending": true
+            "filter": "popular"
+        },
+        {
+            "id": 17,
+            "href": "#",
+            "title": "Goods of the week",
+            "src": "assets/img/255x120/shop_img_3.png",
+            "name": "LG 43UH610V",
+            "price": "$ 384.4",
+            "filter": "new"
+        }, {
+            "id": 18,
+            "href": "#",
+            "title": "Goods of the week",
+            "src": "https://placeimg.com/255/120/tech",
+            "name": "LG 43UH610V",
+            "price": "$ 384.4",
+            "filter": "trending"
+        },
+        {
+            "id": 19,
+            "href": "#",
+            "title": "New product",
+            "src": "https://placeimg.com/255/120/any",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4",
+            "filter": "new"
+        },
+        {
+            "id": 20,
+            "href": "#",
+            "title": "New product",
+            "src": "https://placeimg.com/255/120/any",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4",
+            "filter": "trending"
+        },
+        {
+            "id": 21,
+            "href": "#",
+            "title": "Recommend",
+            "src": "https://placeimg.com/255/120/any",
+            "name": "Asus ZenFone Go ZB452KG",
+            "price": "$ 384.4",
+            "filter": "new"
         }
     ],
     "products-small": [

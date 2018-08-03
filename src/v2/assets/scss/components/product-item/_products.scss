@@ -30,6 +30,8 @@
         .card-header span,
         .card-body p {
             font-family: 'Roboto-Medium';
+            width: inherit;
+            text-align: center;
         }
         .card-header {
             height: 50px;

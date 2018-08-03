@@ -7,8 +7,7 @@
     "build": "webpack --mode production",
     "dev": "webpack-dev-server  --mode development --open --watch",
     "prod": "NODE_ENV=production webpack",
-    "json:server": "json-server --watch ./src/v2/db/db.json --port 3004",
-    "json:server:remote": "json-server https://jsonplaceholder.typicode.com/db --port 3003"
+    "json:server": "json-server --watch ./src/v2/db/db.json --port 3004"
   },
   "repository": {
     "type": "git",

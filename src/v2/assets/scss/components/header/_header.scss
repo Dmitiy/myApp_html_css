@@ -3,6 +3,8 @@
 
 header {
     position: relative;
+    background-color: $color-fff;
+    transition: all .3s;
     &.position-fixed {
         width: 100%;
         top: 0;

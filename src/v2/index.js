@@ -1,22 +1,18 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 import is from 'is_js';
 
 import 'bxslider/dist/jquery.bxslider.min.js';
 
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-
 // import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap-reboot.min.css';
 
-
 // import 'bootstrap-select/dist/css/bootstrap-select.min.css';
 // import 'bootstrap-select/dist/js/bootstrap-select.min.js';
-
 // import 'bootstrap-select/dist/js/i18n/defaults-en_US.min.js';
 
 import './assets/scss/style.scss';
-
 
 $(document).ready(function () {
     $('.bxslider').bxSlider({
@@ -133,8 +129,14 @@ window.onload = () => {
 
     const pageContainer = document.querySelector('.page');
     const header = document.querySelector('header');
-    const topOfHeader = header.offsetTop;
     const main = document.querySelector('main');
+
+    const topOfHeader = header.offsetTop;
+    const helperDiv = header.offsetHeight + 'px';
+    const newDiv = document.createElement("div");
+
+    newDiv.style.height = helperDiv;
+    
     const btnMore = document.querySelector('.btn-show-more');
     const btnsFilter = document.querySelector('main .btn-filter-3');
     const categories = document.querySelector('.category-select-wrapper select');
@@ -224,23 +226,11 @@ window.onload = () => {
     /* ADD SOME FEATURES */ 
 
     // sticky-header
-    const helperDiv = header.offsetHeight + 'px';
-    const newDiv = document.createElement("div");
-    newDiv.style.height = helperDiv;
-
-
-    console.dir(newDiv);
-    console.dir(helperDiv);
+    
 
     const stickyHeader = () => {
-        
-        if ( is.mobile(window.scrollY > topOfHeader) ) {
-            pageContainer.insertBefore(newDiv, main);
-            header.classList.add('position-fixed');
-        } else if ( is.tablet(window.scrollY > topOfHeader) ) {
-            pageContainer.insertBefore(newDiv, main);
-            header.classList.add('position-fixed');
-        } else if (is.desktop(window.scrollY > topOfHeader)) {
+
+        if (window.scrollY > topOfHeader) {
             pageContainer.insertBefore(newDiv, main);
             header.classList.add('position-fixed');
         } else {

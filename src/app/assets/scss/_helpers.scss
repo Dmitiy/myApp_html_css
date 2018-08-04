@@ -1,12 +1,5 @@
 @import '_vars.scss';
 
-/* helper classes */
-// sticky-header
-
-.helper-sticky-header {
-    display: none;
-    height: 150px;
-}
 //wrapper
 .wrapper {
     width: 100%;
@@ -26,12 +19,7 @@
 .border-bottom {
     border-bottom: 2px solid $color-eb;
 }
-.border-top-0 {
-    border-top: none;
-}
-.border-bottom-0 {
-    border-bottom: none;
-}
+
 //border-radius
 .border-left-radius {
     border-top-left-radius: 50px;

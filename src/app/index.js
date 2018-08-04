@@ -1,20 +1,12 @@
 // import $ from 'jquery';
 
-import is from 'is_js';
-
 import 'bxslider/dist/jquery.bxslider.min.js';
-
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
-// import 'bootstrap/dist/css/bootstrap-grid.min.css';
-import 'bootstrap/dist/css/bootstrap-reboot.min.css';
-
-// import 'bootstrap-select/dist/css/bootstrap-select.min.css';
-// import 'bootstrap-select/dist/js/bootstrap-select.min.js';
-// import 'bootstrap-select/dist/js/i18n/defaults-en_US.min.js';
 
 import './assets/scss/style.scss';
 
-$(document).ready(function () {
+(function ($) {
+
+    //slider
     $('.bxslider').bxSlider({
         pager: false,
         touchEnabled: true,
@@ -27,19 +19,7 @@ $(document).ready(function () {
         stopAutoOnClick: true,
         // slideWidth: 1080
     });
-});
 
-(function ($) {
-
-    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    //     $('.selectpicker').selectpicker('mobile');
-    // }
-
-    // $('.category-select-wrapper  .selectpicker, .date-select-wrapper  .selectpicker').selectpicker({
-    //     container: 'body',
-    //     style: 'border-radius',
-    // });
-    
     // show search input
 
     $('.header').on('click', 'label[for="search"]', () => {
@@ -78,7 +58,6 @@ $(document).ready(function () {
             showMenu = false;
         }    
     }
-    
 
     $('aside .btn-filter-3').on('click', 'button', (e) => {
 
@@ -222,12 +201,9 @@ window.onload = () => {
     });
 
 
-
     /* ADD SOME FEATURES */ 
 
     // sticky-header
-    
-
     const stickyHeader = () => {
 
         if (window.scrollY > topOfHeader) {
@@ -237,7 +213,6 @@ window.onload = () => {
             pageContainer.removeChild(newDiv);
             header.classList.remove('position-fixed');
         }
-        
     }
     
     window.addEventListener('scroll', stickyHeader);

@@ -80,7 +80,8 @@
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
             "filter": "popular"
-        }, {
+        },
+        {
             "id": 10,
             "href": "#",
             "title": "Bestseller",
@@ -88,7 +89,8 @@
             "name": "Xiaomi Mi Band 2",
             "price": "$ 384.4",
             "filter": "popular"
-        }, {
+        },
+        {
             "id": 11,
             "href": "#",
             "title": "Goods of the week",
@@ -96,7 +98,8 @@
             "name": "LG 43UH610V",
             "price": "$ 384.4",
             "filter": "new"
-        }, {
+        },
+        {
             "id": 12,
             "href": "#",
             "title": "Recommend",
@@ -104,7 +107,8 @@
             "name": "Apple iMac 27 Retina 5K",
             "price": "$ 384.4",
             "filter": "popular"
-        }, {
+        },
+        {
             "id": 13,
             "href": "#",
             "title": "New product",
@@ -112,7 +116,8 @@
             "name": "Asus ZenFone Go ZB452KG",
             "price": "$ 384.4",
             "filter": "popular"
-        }, {
+        },
+        {
             "id": 14,
             "href": "#",
             "title": "Recommend",
@@ -120,7 +125,8 @@
             "name": "Electrolux EZB 52410 AK",
             "price": "$ 384.4",
             "filter": "new"
-        }, {
+        },
+        {
             "id": 15,
             "href": "#",
             "title": "Bestseller",
@@ -128,7 +134,8 @@
             "name": "Beats studio wireless",
             "price": "$ 384.4",
             "filter": "trending"
-        }, {
+        },
+        {
             "id": 16,
             "href": "#",
             "title": "Recommend",
@@ -145,7 +152,8 @@
             "name": "LG 43UH610V",
             "price": "$ 384.4",
             "filter": "new"
-        }, {
+        },
+        {
             "id": 18,
             "href": "#",
             "title": "Goods of the week",

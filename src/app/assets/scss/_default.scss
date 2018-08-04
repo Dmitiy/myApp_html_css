@@ -104,11 +104,25 @@ button {
     font-size: 12px;
 }
 
+button {
+    font-family: 'Roboto-Bold';
+    padding: 9px;
+    text-align: center;
+    background-color: $color-fff;
+    white-space: nowrap;
+    &:hover {
+        background-color: $color-fa;
+        color: $color-80;
+        cursor: pointer;
+    }
+}
+
 a {
     font-size: 13px;
     font-family: 'Roboto-Medium';
     line-height: 20px;
     color: $color-b2;
+    background-color: transparent;
     &:hover {
         color: $color-80;
     }
@@ -127,21 +141,6 @@ nav {
 
 main {
     margin-top: 48px;
-}
-button {
-    font-size: 12px;
-    font-family: 'Roboto-Bold';
-    color: $color-b2;
-    padding: 9px;
-    border: 2px solid $color-eb;
-    text-align: center;
-    background-color: $color-fff;
-    white-space: nowrap;
-    &:hover {
-        background-color: $color-fa;
-        color: $color-80;
-        cursor: pointer;
-    }
 }
 
 h4 {

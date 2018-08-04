@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "dev": "webpack-dev-server  --mode development --open --watch",
     "prod": "NODE_ENV=production webpack",
-    "json:server": "json-server --watch ./src/v2/db/db.json --port 3004"
+    "json:server": "json-server --watch ./src/app/db/db.json --port 3004"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
-    "bootstrap": "^4.1.1",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
@@ -36,6 +35,7 @@
     "html-webpack-plugin": "^4.0.0-alpha",
     "imagemin-webpack-plugin": "^2.1.5",
     "img-loader": "^3.0.0",
+    "json-server": "^0.14.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "pug": "^2.0.3",
@@ -50,11 +50,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "bootstrap-select": "^1.13.1",
     "bxslider": "^4.2.13",
-    "is_js": "^0.9.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "jquery": "^3.2.1"
   }
 }

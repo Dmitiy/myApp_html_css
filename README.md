@@ -1,6 +1,12 @@
 # myApp_MarketPlace
----
-*technologies:* html: [pug] | css: [scss] | javascript: [jquery] | webpack | json-server
+
+technologies:
+
+- html: [ pug ]
+- css: [ scss ]
+- javascript: [ jquery ]
+- webpack
+- json-server
 
 ### TO DO:
 

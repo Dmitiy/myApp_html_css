@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 // import "babel-polyfill";
 
 import 'bxslider/dist/jquery.bxslider.min';

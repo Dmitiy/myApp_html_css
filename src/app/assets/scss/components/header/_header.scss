@@ -29,20 +29,16 @@ header {
                 &.Menu-icon {
                     display: none;
                 }
-                &.Search-icon {
-                    flex-basis: 30px;
-                }
-                &.Form-search-input {
-                    flex-basis: 270px;
+                &.Form-search-input,
+                &.Logo,
+                &.Profile {
+                    width: 33%;
                 }
                 &.Logo {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    flex-basis: 40px;
-                }
-                &.Profile {
-                    flex-basis: 360px;
+                    width: 33%;
                 }
                 &.Menu-icon {
                     justify-content: flex-end;

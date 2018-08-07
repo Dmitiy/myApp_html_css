@@ -85,19 +85,19 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
 
         const data = $(e.target).data('btn-filter');
 
-        $('[data-filter]')
+        $('aside [data-filter]')
             .hide()
                 .filter('[data-filter=' + data + ']')
                     .show();
 
-        $('[data-btn-filter]')
+        $('aside [data-btn-filter]')
             .removeClass('active')
                 .filter('[data-btn-filter=' + data + ']')
                     .addClass('active');
 
         if ( data === 'Close' ) {
             toggleMenu();
-            $('[data-btn-filter="Close"]')
+            $('aside [data-btn-filter="Close"]')
                 .removeClass('active')
                     .prev()
                         .addClass('active');
@@ -106,11 +106,11 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
         }
     });
 
-    $('.btn-filter-3').on('click', 'button', (e) => {
+    $('main .btn-filter-3').on('click', 'button', (e) => {
 
         const data = $(e.target);
         
-        $('[data-filterName]')
+        $('main [data-filterName]')
             .removeClass('active')
                 .filter(data)
                     .addClass('active')

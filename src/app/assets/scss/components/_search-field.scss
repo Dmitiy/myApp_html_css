@@ -13,6 +13,9 @@
         top: 20px;
         .Search-input {
             max-width: 100%;
+            #search:focus {
+                background-color: $color-fff;
+            }
             .btn-close {
                 display: flex;
             }

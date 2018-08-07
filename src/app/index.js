@@ -107,6 +107,7 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
     /* HEADER */
 
     $('header .Menu').on('click', 'a', (e) => {
+        e.preventDefault();
         $(e.target).siblings().removeClass('active');
         $(e.target).addClass('active');
     });

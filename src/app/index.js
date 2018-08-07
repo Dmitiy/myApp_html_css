@@ -7,7 +7,6 @@ import './assets/scss/style.scss';
 
 import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeatherApi';
 
-
 (function ($) {
     //preloader
     var preloader = $('.preloader');
@@ -39,7 +38,6 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
         nextSelector: '.next',
         prevSelector: '.prev',
         stopAutoOnClick: true,
-        // slideWidth: 1080
     });
 
     // show search input
@@ -105,6 +103,15 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
             $('[data-filter="Menu"]').show();
         }
     });
+
+    /* HEADER */
+
+    $('header .Menu').on('click', 'a', (e) => {
+        $(e.target).siblings().removeClass('active');
+        $(e.target).addClass('active');
+    });
+
+    /* MAIN */
 
     $('main .btn-filter-3').on('click', 'button', (e) => {
 

@@ -18,7 +18,7 @@ const extractPlugin = new ExtractTextPlugin({
 module.exports = {
 
     entry: {
-        app: [
+        app: ["babel-polyfill",
             './src/app/index.js',
             './src/app/assets/scss/style.scss',
         ]
@@ -96,7 +96,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',

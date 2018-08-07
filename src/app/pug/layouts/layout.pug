@@ -6,6 +6,8 @@ html(lang="en")
         include ../includes/meta
         title #{title}
     body
+        .preloader.is-active
+            .preloader-status 100%
         .Search-field
             include ../components/Search-input
         include ../components/Aside

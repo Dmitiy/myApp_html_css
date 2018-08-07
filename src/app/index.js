@@ -1,10 +1,32 @@
 // import $ from 'jquery';
+// import "babel-polyfill";
 
-import 'bxslider/dist/jquery.bxslider.min.js';
+import 'bxslider/dist/jquery.bxslider.min';
 
 import './assets/scss/style.scss';
 
+import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeatherApi';
+
+
 (function ($) {
+    //preloader
+    var preloader = $('.preloader');
+    var preloaderStatus = $('.preloader-status');
+    var duration = 3000;
+    $({preloaderStatus: 0 }).animate(
+        {
+            preloaderStatus: preloaderStatus.text()
+        },
+        {
+            duration: duration,
+            step: function () {
+                preloaderStatus.text(Math.ceil(this.preloaderStatus) + "%");
+                setTimeout(() => {
+                    preloader.removeClass('is-active');
+                }, duration);
+            }
+        }
+    );
 
     //slider
     $('.bxslider').bxSlider({
@@ -93,11 +115,14 @@ import './assets/scss/style.scss';
                 .filter(data)
                     .addClass('active')
     });
-  
+    
 })(jQuery);
 
 
-window.onload = () => {
+( () => {
+    
+    requestToWeatherApi();
+
 
     let products = [];
     let flag = true;
@@ -216,5 +241,5 @@ window.onload = () => {
     }
     
     window.addEventListener('scroll', stickyHeader);
-};
+})();
 

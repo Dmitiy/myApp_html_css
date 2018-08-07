@@ -7,7 +7,25 @@ import './assets/scss/style.scss';
 
 import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeatherApi';
 
+
+
 (function ($) {
+    
+    //slider
+    $(document).ready(() => {
+        $('.bxslider').bxSlider({
+            pager: false,
+            touchEnabled: true,
+            responsive: true,
+            adaptiveHeight: true,
+            nextText: '',
+            prevText: '',
+            nextSelector: '.next',
+            prevSelector: '.prev',
+            stopAutoOnClick: true,
+        });
+    });
+
     //preloader
     var preloader = $('.preloader');
     var preloaderStatus = $('.preloader-status');
@@ -26,19 +44,6 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
             }
         }
     );
-
-    //slider
-    $('.bxslider').bxSlider({
-        pager: false,
-        touchEnabled: true,
-        responsive: true,
-        adaptiveHeight: true,
-        nextText: '',
-        prevText: '',
-        nextSelector: '.next',
-        prevSelector: '.prev',
-        stopAutoOnClick: true,
-    });
 
     // show search input
 

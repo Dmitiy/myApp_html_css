@@ -10,6 +10,13 @@ header {
         top: 0;
         background-color: $color-fa;
         z-index: 8;
+        .Form-search-input {
+            .Search-input {
+                #search:focus {
+                    background-color: $color-fff;
+                }
+            }
+        }
     }
     ul {
         &.header {

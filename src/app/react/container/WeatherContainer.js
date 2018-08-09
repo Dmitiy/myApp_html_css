@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { fetchWeatherApi } from '../actions/fetchWeatherApi';
+import { requestToWeatherApi } from '../actions/fetchWeatherApi';
 
 class WeatherContainer extends Component {
 	constructor (props){
@@ -12,7 +12,7 @@ class WeatherContainer extends Component {
 	}
 
 	componentDidMount() {
-		fetchWeatherApi()
+		requestToWeatherApi()
 		.then((data) => {
 			this.setState({
 				options: data

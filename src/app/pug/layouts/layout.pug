@@ -6,13 +6,12 @@ html(lang="en")
         include ../includes/meta
         title #{title}
     body
-        .preloader.is-active
-            .preloader-status 100%
-        .Search-field
-            include ../components/Search-input
+        include ../components/Preloader
         include ../components/Aside
         .page
             header
+                .Search-field
+                    include ../components/Search-input
                 include ../components/header
                 include ../components/Menu
             main.border-bottom

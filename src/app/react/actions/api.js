@@ -1,10 +1,1 @@
-const api = {
-    lat: 44.593613,
-    lon: 33.546972,
-    lang: 'ru_RU',
-    limit: 7,
-    hours: true,
-    extra: true,
-}
-
-export const url = () => `https://api.weather.yandex.ru/v1/forecast?lat=${api.lat}&lon=${api.lon}`;
+export const url = () => `https://api.openweathermap.org/data/2.5/weather?lat=44.592132&lon=33.445630&units=metric&appid=80041ae0e7613e64f4a44625569662ac`;

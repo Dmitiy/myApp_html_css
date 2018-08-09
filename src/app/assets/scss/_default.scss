@@ -42,6 +42,7 @@ body {
     height: 100%;
     max-width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 img {
@@ -78,9 +79,10 @@ h3, h5, h6 {
 a,
 input,
 button {
+    transition: all .3s linear;
     &:focus,
     &:hover {
-        transition: all .2s;
+        transition: all .3s linear;
     }
 }
 

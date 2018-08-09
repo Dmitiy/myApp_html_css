@@ -6,9 +6,6 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        &.position-fixed {
-         
-        }
     }
     a {
         position: relative;
@@ -23,11 +20,11 @@ nav {
             bottom: 0;
             width: 0;
             background: $color-eb;
-            transition: all 0.5s linear;
+            transition: all .3s linear;
             z-index: -1;
         }
         &:hover {
-            transition: all 0.5s linear;
+            transition: all 0.3s linear;
             &::after {
                 width: 100%;
             }

@@ -5,26 +5,11 @@ import 'bxslider/dist/jquery.bxslider.min';
 
 import './assets/scss/style.scss';
 
-import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeatherApi';
+import WeatherWidget from "./react/WeatherWidget";
 
 
 
 (function ($) {
-    
-    //slider
-    $(document).ready(() => {
-        $('.bxslider').bxSlider({
-            pager: false,
-            touchEnabled: true,
-            responsive: true,
-            adaptiveHeight: true,
-            nextText: '',
-            prevText: '',
-            nextSelector: '.next',
-            prevSelector: '.prev',
-            stopAutoOnClick: true,
-        });
-    });
 
     //preloader
     var preloader = $('.preloader');
@@ -44,6 +29,21 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
             }
         }
     );
+
+    //slider
+    $(document).ready(() => {
+        $('.bxslider').bxSlider({
+            pager: false,
+            touchEnabled: true,
+            responsive: true,
+            adaptiveHeight: true,
+            nextText: '',
+            prevText: '',
+            nextSelector: '.next',
+            prevSelector: '.prev',
+            stopAutoOnClick: true,
+        });
+    });
 
     // show search input
 
@@ -132,10 +132,7 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
 })(jQuery);
 
 
-( () => {
-    
-    requestToWeatherApi();
-
+window.onload = () => {
 
     let products = [];
     let flag = true;
@@ -209,15 +206,15 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
     }
 
     const renderItem = (productItem) => {
-        return `<a class="card box-shadow" href="${productItem.href}">
+        return `<a class="card" href="${productItem.href}">
                     <div class="card-header">
                         <span class='text-truncate'>${productItem.title}</span>
                     </div>
-                    <div class="card-body border-top">
+                    <div class="card-body">
                         <img src="${productItem.src}" />
                         <p class="text-truncate">${productItem.name}</p>
                     </div>
-                    <div class="card-footer border-top">
+                    <div class="card-footer">
                         <span class="amount">${productItem.price}</span>
                     </div>
                 </a>`;
@@ -254,5 +251,8 @@ import { requestToWeatherApi , fetchWeatherApi } from './react/actions/fetchWeat
     }
     
     window.addEventListener('scroll', stickyHeader);
-})();
+
+
+    WeatherWidget();
+};
 

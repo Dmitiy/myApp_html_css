@@ -13,7 +13,7 @@ aside {
     height: 100%;
     opacity: 0;
     z-index: -1;
-    transition: all .3s ease-in-out;
+    transition: all .3s linear;
     padding: 8px;
     .User-profile {
         display: none;
@@ -54,7 +54,7 @@ aside {
         left: 0;
         opacity: 1;
         z-index: 11;
-        transition: left .2s linear;
+        transition: left .3s linear;
         .User-profile {
             margin: auto;
             .User-profile-img {

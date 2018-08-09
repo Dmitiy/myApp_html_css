@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import WeatherContainer from '../components/WeatherContainer';
+import WeatherContainer from './container/WeatherContainer';
 
-class WeatherWidget extends React.Component {
-    render() {
-        return (
-            <React.Fragment>
-                <WeatherContainer />
-            </React.Fragment>
-        );
-    }
+export default () => {
+    ReactDOM.render( <WeatherContainer /> , document.getElementById('weatherWidget'));
 }
-
-ReactDOM.render( <WeatherWidget /> , document.getElementById('weatherWidget'));

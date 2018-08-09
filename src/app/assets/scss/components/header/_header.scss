@@ -4,12 +4,13 @@
 header {
     position: relative;
     background-color: $color-fff;
-    transition: all .3s;
+    transition: all .3s linear;
     &.position-fixed {
         width: 100%;
         top: 0;
         background-color: $color-fa;
         z-index: 8;
+        @extend .box-shadow;
         .Form-search-input {
             .Search-input {
                 #search:focus {
@@ -29,16 +30,19 @@ header {
                 &.Menu-icon {
                     display: none;
                 }
-                &.Form-search-input,
-                &.Logo,
+                &.Form-search-input {
+                    width: 40%;
+                }
+                &.Logo {
+                    width: 20%;
+                }
                 &.Profile {
-                    width: 33%;
+                    width: 40%;
                 }
                 &.Logo {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 33%;
                 }
                 &.Menu-icon {
                     justify-content: flex-end;
@@ -51,6 +55,8 @@ header {
 .Logo-img,
 .User-profile-img {
     display: block;
+    width: 40px;
+    height: 40px;
     img {
         width: 40px;
         height: 40px;

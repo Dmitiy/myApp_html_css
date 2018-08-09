@@ -1,22 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { Weather } from '../components/Weather';
-import fetchWeatherApi from '../actions/fetchWeatherApi';
+import { fetchWeatherApi } from '../actions/fetchWeatherApi';
 
 class WeatherContainer extends Component {
-	state = {
-		options: null
+	constructor (props){
+		super(props)
+		this.state = {
+			options: null
+		}
+
 	}
 
 	componentDidMount() {
-		fetchWeatherApi();
+		fetchWeatherApi()
+		.then((data) => {
+			this.setState({
+				options: data
+			})
+		})
 	}
 
 	render() {
+		console.log('state', this.state.options);
+		if(!this.state.options) {
+			return 'loading ...'
+		}
 		return (
 			<div className='weather-container'>
-				<p><a href="https://yandex.ru/pogoda/sevastopol">Яндекс.Погода</a></p>
-				<Weather weatherApi={ options } />
+				<h2>test!</h2>
 			</div>
 		)
 	}

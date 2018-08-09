@@ -1,13 +1,14 @@
 block myCarousel
 
 .myCarousel
-	ul.bxslider
-		li
-			img(src='assets/img/slider/Image.png')
-			.caption.text-center
-				include ../elements/badge
-				h2 The Best Place to Play
-				p Space The Final Frontier
-		li: img(src='assets/img/slider/Image.png')
-	.prev(data-slide='prev', role='button')
-	.next(data-slide='next', role='button')
+	.wrapper
+		ul.bxslider
+			li
+				img(src='assets/img/slider/Image.png')
+				.caption.text-center
+					include ../elements/badge
+					h2 The Best Place to Play
+					p Space The Final Frontier
+			li: img(src='assets/img/slider/Image.png')
+		.prev(data-slide='prev', role='button')
+		.next(data-slide='next', role='button')

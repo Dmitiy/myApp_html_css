@@ -1,4 +1,4 @@
-# [myApp_MarketPlace] (https://dmitiy.github.io/myApp_html_css/)
+# [myApp_MarketPlace](https://dmitiy.github.io/myApp_html_css/)
 
 technologies:
 

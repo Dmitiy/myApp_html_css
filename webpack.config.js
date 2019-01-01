@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-const CleanWebpackPlugin  = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const cleanPlugin = new CleanWebpackPlugin(['public']);
 
 const isProduction = (process.env.NODE_ENV === 'production');
@@ -25,7 +25,7 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'public/'),
+        path: path.resolve(__dirname, 'dist/'),
         filename: 'assets/js/[name].js',
         chunkFilename: 'assets/js/[name]',
     },
@@ -37,8 +37,8 @@ module.exports = {
         path: true,
         url: false
     },
-    devServer : {
-        contentBase : './public',
+    devServer: {
+        contentBase: './dist',
         overlay: {
             warnings: true,
             errors: true
@@ -47,12 +47,11 @@ module.exports = {
     devtool: (isProduction) ? '' : 'inline-source-map',
 
     resolveLoader: {
-        moduleExtensions: [ '-loader' ]
+        moduleExtensions: ['-loader']
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.pug$/,
                 loader: "pug-loader",
                 options: {
@@ -78,18 +77,23 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: extractPlugin.extract({
-                    use: [
-                        {
+                    use: [{
                             loader: 'css-loader',
-                            options: { sourceMap: true }
+                            options: {
+                                sourceMap: true
+                            }
                         },
                         {
                             loader: 'postcss-loader',
-                            options: { sourceMap: true }
+                            options: {
+                                sourceMap: true
+                            }
                         },
-                        { 
+                        {
                             loader: 'sass-loader',
-                            options: { sourceMap: true },
+                            options: {
+                                sourceMap: true
+                            },
                         }
                     ],
                     fallback: 'style-loader'
@@ -106,9 +110,8 @@ module.exports = {
                 }
             },
             {
-                test : /\.(png|gif|jpe?g)$/,
-                loaders: [
-                    {
+                test: /\.(png|gif|jpe?g)$/,
+                loaders: [{
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
@@ -122,14 +125,13 @@ module.exports = {
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 loaders: [{
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'assets/fonts/',
-                            publicPath: '../fonts/'
-                        },
-                    }
-                ]
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/fonts/',
+                        publicPath: '../fonts/'
+                    },
+                }]
             },
             {
                 test: /\.svg/,
@@ -141,7 +143,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.js', '.jsx', '.json', '.html', '.pug', '.scss', '.css']
+        extensions: ['.js', '.jsx', '.json', '.html', '.pug', '.scss', '.css']
     },
     plugins: [
 
@@ -156,15 +158,12 @@ module.exports = {
 
         new CopyWebpackPlugin(
             [{
-                from : 'src/app/assets/img',
+                from: 'src/app/assets/img',
                 to: 'assets/img/'
-            }],
-            {
-                ignore : [
-                    {
-                        glob: 'svg/*'
-                    }
-                ]
+            }], {
+                ignore: [{
+                    glob: 'svg/*'
+                }]
             }
         ),
 
@@ -181,12 +180,12 @@ module.exports = {
 if (isProduction) {
     module.exports.plugins.push(
         new UglifyJSPlugin({
-            sourceMap : true  
+            sourceMap: true
         }),
     );
     module.exports.plugins.push(
         new ImageminPlugin({
-            test : /\.(png|jpe?g|gif|svg)$/i
+            test: /\.(png|jpe?g|gif|svg)$/i
         }),
     );
     module.exports.plugins.push(

@@ -1,76 +1,9 @@
 extends layouts/layout
 
-mixin tech-checkbox(name, title, isChecked)
-    .checkbox-item
-        input(type="checkbox", name=name, checked=isChecked)
-        label= title
-
 block content
-    .title-image
-        img(src="assets/img/case@1X.png", alt="дело", title='дело')
-    form(action="", autocomplete='off', name='about-person')
-        .form-item
-            label(for="form-name") Полное ФИО
-            input#form-name(type="text", name="form-name", value="Шкарлат Дмитрий Васильевич")
-        .form-item
-            label(for="form-year") Год рождения
-            input#form-year(type="text", name="form-year", value="1986")
-        .form-item
-            label(for="form-location") Место жительства
-            input#form-location(type="text", name="form-location", value="г. Севастополь, Россия")
-        .form-item
-            label(for="form-skype") Скайп
-            input#form-skype(type="text", name="form-skype", value="dreamcast29")
-        .form-item
-            label(for="form-email") Почта
-            input#form-email(type="email", name="form-email", value="shkarlat.dmitry@yandex.ru")
-
-    .article
-        h4 Расскажите о себе чекбоксами 
-        p Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. 
-            | Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. 
-            | Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
-    ul.tech-list
-        li.box-1
-            +tech-checkbox('BEM', 'БЭМ/OOCSS', false)
-            +tech-checkbox('pug', 'Pug (Jade)', true)
-            +tech-checkbox('css', 'Stylus/LESS/SASS', true)
-            +tech-checkbox('svg', 'Работаю с SVG', false)
-            +tech-checkbox('semantic', 'Верстаю семантично', true)
-            +tech-checkbox('a11y', 'Accessibility (A11Y)', false)
-            +tech-checkbox('es', 'ES2015/ES2016', true)
-        li.box-2
-            +tech-checkbox('runTasks', 'Gulp/GRUNT', true)
-            +tech-checkbox('webpack', 'Webpack', true)
-            +tech-checkbox('webgl', 'Дружу с WebGL', false)
-            +tech-checkbox('jq', 'jQuery', true)
-            +tech-checkbox('ng', 'Знаю/изучаю Angular', false)
-            +tech-checkbox('react', 'Изучаю/знаю React', true)
-            +tech-checkbox('node', 'Изучаю/знаю Node.js', false)
-        li.box-3
-            +tech-checkbox('git', 'Использую Git', true)
-            .checkbox-item
-                input(type="checkbox", name="pixelperfect", checked=true)
-                label.label-pixelperfect
-                    span С
-                    span глазомером
-                    span всё
-                    span ок
-            .checkbox-item
-                input(type="checkbox", name="cssr", checked=false)
-                label Читаю 
-                    a(href='blog.csssr.ru', title='blog.csssr.ru') blog.csssr.ru
-            +tech-checkbox('lazy', 'Я ленивый(-ая)', false)
-            .checkbox-item
-                input(type="checkbox", name="lang", checked=false)
-                label.label-lang У меня хороший 
-                    span английский
-    .article
-        h4 Уровень владения JavaScript
-    .article
-        h4 Расскажите о себе словами
-        p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. 
-            | Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-    .article
-        h4 Какие у вас планы на будущее?
-        p Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+	include components/myCarousel
+	include components/weatherWidget
+	include components/Group-btns
+	include components/Products
+	include components/Subscribe
+	include components/Products-small

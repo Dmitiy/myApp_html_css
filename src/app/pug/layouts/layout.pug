@@ -1,4 +1,4 @@
-- var title = 'resume';
+- var title = 'MarketPlace';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -6,13 +6,15 @@ html(lang="en")
         include ../includes/meta
         title #{title}
     body
+        include ../components/Preloader
+        include ../components/Aside
         .page
-            .helper-image
-                img(src="assets/img/secret@1X.png", alt="секретно заполнено собственноручно", title='секретно заполнено собственноручно')
-            .wrapper
-                header
-                    include ../components/Header
-                main
-                    block content
-                footer
-                    include ../components/Footer
+            header
+                .Search-field
+                    include ../components/Search-input
+                include ../components/header
+                include ../components/Menu
+            main.border-bottom
+                block content
+            footer
+                include ../components/Footer

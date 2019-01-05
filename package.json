@@ -1,24 +1,25 @@
 {
-  "name": "resume",
+  "name": "myApp_html_css",
   "version": "1.0.0",
   "description": "html, css",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server  --mode development --open --watch",
-    "prod": "NODE_ENV=production webpack"
+    "prod": "NODE_ENV=production webpack",
+    "json:server": "json-server --watch ./src/app/db/db.json --port 3004"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dmitiy/resume.git"
+    "url": "git+https://github.com/Dmitiy/myApp_html_css.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dmitiy/resume/issues"
+    "url": "https://github.com/Dmitiy/myApp_html_css/issues"
   },
-  "homepage": "https://github.com/Dmitiy/resume#readme",
+  "homepage": "https://github.com/Dmitiy/myApp_html_css#readme",
   "devDependencies": {
     "autoprefixer": "^8.6.3",
     "babel-cli": "^6.26.0",
@@ -51,6 +52,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "bxslider": "^4.2.13",
+    "jquery": "^3.2.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }

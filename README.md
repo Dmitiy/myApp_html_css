@@ -2,11 +2,11 @@
 
 technologies:
 
-- html: [ pug ]
-- css: [ scss ]
-- javascript: [ jquery ]
-- webpack
-- json-server
+-   html: [ pug ]
+-   css: [ scss ]
+-   javascript: [ jquery ]
+-   webpack
+-   json-server
 
 ### TO DO:
 
@@ -14,3 +14,4 @@ technologies:
 2. `npm install`.
 3. `npm run dev` and `npm run json:server` - for development.
 4. `npm run prod` and `npm run json:server` - for production.
+5. `npm run deploy` - deploy to gh-pages.

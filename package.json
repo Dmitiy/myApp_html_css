@@ -7,7 +7,8 @@
     "build": "webpack --mode production",
     "dev": "webpack-dev-server  --mode development --open --watch",
     "prod": "NODE_ENV=production webpack",
-    "json:server": "json-server --watch ./src/app/db/db.json --port 3004"
+    "json:server": "json-server --watch ./src/app/db/db.json --port 3004",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^4.0.0-alpha",
     "imagemin-webpack-plugin": "^2.1.5",

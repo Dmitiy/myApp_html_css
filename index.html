@@ -1,0 +1,200 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>MarketPlace</title>
+  <link href="assets/css/app.css" rel="stylesheet"></head>
+  <body>
+    <div class="preloader is-active">
+      <div class="preloader-status">100%</div>
+    </div>
+    <aside>
+      <div class="User-profile" data-filter="Profile"><a class="User-profile-img" href="/"><img src="assets/img/user/avatar.png"></a>
+        <ul>
+              <li><span class="sprite sprite-favorite"></span><a href="#">Favorite</a></li>
+              <li><span class="sprite sprite-compare "></span><a href="#">Compare</a></li>
+              <li><span class="sprite sprite-cart"></span><a href="#">Cart</a></li>
+        </ul>
+      </div>
+      <nav class="Menu" data-filter="Menu"><a href="#">Electronics</a><a class="active " href="#">Appliances</a><a href="#">Childrens goods</a><a href="#">Repairs</a><a href="#">Clothes</a><a href="#">Footwear</a><a href="#">Beauty</a>
+      </nav>
+      <div class="btn-filter-3">
+        <button class="border-left-radius" type="button" data-btn-filter="Profile">Profile</button>
+        <button class="active" type="button" data-btn-filter="Menu">Menu</button>
+        <button class="border-right-radius" type="button" data-btn-filter="Close">Close</button>
+      </div>
+    </aside>
+    <div class="page">
+      <header>
+        <div class="Search-field">
+          <div class="Search-input">
+            <form name="search-goods" autocomplete="off">
+              <label class="sprite sprite-search" for="search"></label>
+              <input class="border-radius" id="search" type="search" name="search" placeholder="Search goods...">
+              <button class="btn-close" type="button"><span></span></button>
+            </form>
+          </div>
+        </div>
+        <ul class="header">
+          <li class="Search-icon">
+            <label class="sprite sprite-search" for="search"></label>
+          </li>
+          <li class="Form-search-input">
+            <div class="Search-input">
+              <form name="search-goods" autocomplete="off">
+                <label class="sprite sprite-search" for="search"></label>
+                <input class="border-radius" id="search" type="search" name="search" placeholder="Search goods...">
+                <button class="btn-close" type="button"><span></span></button>
+              </form>
+            </div>
+          </li>
+          <li class="Logo"><a href="/"><img alt="logo" src="assets/img/Logo.png"></a>
+          </li>
+          <li class="Profile">
+            <ul class="User-profile">
+                          <li><span class="sprite sprite-favorite"></span><a href="#">Favorite</a></li>
+                          <li><span class="sprite sprite-compare "></span><a href="#">Compare</a></li>
+                          <li><span class="sprite sprite-cart"></span><a href="#">Cart</a></li>
+              <li class="User-profile-img"><a href="#"><img src="assets/img/user/avatar.png"></a></li>
+            </ul>
+          </li>
+          <li class="Menu-icon">
+            <button class="btn-menu" type="button"><span></span><span></span><span></span></button>
+          </li>
+        </ul>
+        <nav class="Menu border-top border-bottom"><a href="#">Electronics</a><a class="active" href="#">Appliances</a><a href="#">Childrens goods</a><a href="#">Repairs</a><a href="#">Clothes</a><a href="#">Footwear</a><a href="#">Beauty</a>
+        </nav>
+      </header>
+      <main class="border-bottom">
+        <div class="myCarousel">
+          <div class="wrapper">
+            <ul class="bxslider">
+              <li><img src="assets/img/slider/Image.png">
+                <div class="caption text-center"><span class="badge badge-danger border-radius">Badge</span>
+                  <h2>The Best Place to Play</h2>
+                  <p>Space The Final Frontier</p>
+                </div>
+              </li>
+              <li><img src="assets/img/slider/Image.png"></li>
+            </ul>
+            <div class="prev" data-slide="prev" role="button"></div>
+            <div class="next" data-slide="next" role="button"></div>
+          </div>
+        </div>
+        <div id="weatherWidget">
+          <div class="wrapper"></div>
+        </div>
+        <section class="filter-group-btns">
+          <div class="wrapper">
+            <h4><span class="sprite sprite-star"></span>Interesting offers</h4>
+            <div class="btn-filter-3">
+              <button class="border-left-radius" type="button" data-filterName="Popular">Popular</button>
+              <button class="active" type="button" data-filterName="Trending">Trending</button>
+              <button class="border-right-radius" type="button" data-filterName="New">New</button>
+            </div>
+            <div class="select-wrapper">
+              <form action="" autocomplete="off" name="selectProducts">
+                <div class="category-select-wrapper">
+                  <select name="selectCategory">
+                    <option value="All">All</option>
+                    <option value="Bestseller">Bestseller</option>
+                    <option value="Recommend">Recommend</option>
+                    <option value="New product">New product</option>
+                    <option value="Goods of the week">Goods of the week</option>
+                  </select>
+                </div>
+                <div class="date-select-wrapper">
+                  <select>
+                    <option>Date</option>
+                    <option>Week</option>
+                    <option>Month</option>
+                    <option>Year</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="Products">
+          <div class="wrapper"></div>
+        </section>
+        <div class="text-center">
+          <button class="border-radius btn-show-more" type="button">Show More</button>
+        </div>
+        <section class="Subscribe border-top border-bottom">
+          <div class="wrapper">
+            <p><span class="sprite sprite-envelope-open"></span>Learn about profitable offers and get personal recommendations</p>
+            <div class="Subscribe-form-input">
+              <form class="Subscribe-input border-radius" name="subscribe-email" autocomplete="off">
+                <label class="sprite sprite-envelope position-absolute" for="email"></label>
+                <input class="border-radius" id="email" placeholder="Email" type="email">
+                <button class="btn-subscribe border-radius" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="Products-small">
+          <div class="wrapper">
+            <h4><span class="sprite sprite-eye"></span>Recently viewed products</h4>
+            <div class="Products-small-items"><a class="card-item-small" href="#"><img src="assets/img/80x60/prod_small_1.png">
+                        <div class="card-body">
+                          <h5 class="text-truncate">Apple iPhone 7</h5><strong>$ 670</strong>
+                        </div></a><a class="card-item-small" href="#"><img src="assets/img/80x60/prod_small_2.png">
+                        <div class="card-body">
+                          <h5 class="text-truncate">LG 46UH610V</h5><strong>$ 545</strong>
+                        </div></a><a class="card-item-small" href="#"><img src="assets/img/80x60/prod_small_3.png">
+                        <div class="card-body">
+                          <h5 class="text-truncate">LG G6 H870DS</h5><strong>$ 545</strong>
+                        </div></a><a class="card-item-small" href="#"><img src="assets/img/80x60/prod_small_4.png">
+                        <div class="card-body">
+                          <h5 class="text-truncate">Asus ZenFone</h5><strong>$ 545</strong>
+                        </div></a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="Footer-block border-bottom">
+          <div class="wrapper">
+            <div class="Block-users">
+              <h6><span class="sprite sprite-users"></span>Users</h6>
+              <div>
+                <p class="text-indent__1"><a href="#">Payment</a></p>
+                <p class="text-indent__1"><a href="#">Delivery</a></p>
+                <p class="text-indent__1"><a href="#">Return and exchangee</a></p>
+              </div>
+              <div>
+                <p class="text-indent__2"><a href="#">Help with the service</a></p>
+                <p class="text-indent__2"><a href="#">Terms of use</a></p>
+                <p class="text-indent__2"><a href="#">Feedback</a></p>
+              </div>
+            </div>
+            <div class="Block-shopping">
+              <h6><span class="sprite sprite-shops"></span>Shopping</h6>
+              <div>
+                <p class="text-indent__1"><a href="#">Connectivity</a></p>
+                <p class="text-indent__1"><a href="#">Help for shops</a></p>
+                <p class="text-indent__1"><a href="#">Dashboard</a></p>
+              </div>
+              <div>
+                <p class="text-indent__3"><a href="#">Storehouse</a></p>
+                <p class="text-indent__3"><a href="#">Terms of use</a></p>
+                <p class="text-indent__3"><a href="#">Feedback</a></p>
+              </div>
+            </div>
+            <div class="Block-statistic">
+              <h6><span class="sprite sprite-statistic"></span>Statistic</h6>
+              <p class="text-indent__1"><strong>453 034</strong><span>Goods</span></p>
+              <p class="text-indent__1"><strong>2 545</strong><span>Shops</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="sub-footer">
+          <nav><a href="#">Mobile version</a><a href="#">Statistics</a><a href="#">Advertising</a></nav>
+        </div>
+      </footer>
+    </div>
+  <script src="assets/js/app.js"></script></body>
+</html>

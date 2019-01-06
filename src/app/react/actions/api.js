@@ -1,1 +1,0 @@
-export const url = () => `https://api.openweathermap.org/data/2.5/weather?lat=44.592132&lon=33.445630&units=metric&appid=80041ae0e7613e64f4a44625569662ac`;
